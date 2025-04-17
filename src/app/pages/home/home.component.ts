@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { PropertyService } from '../../core/services/property.service';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +30,7 @@ import { PropertyService } from '../../core/services/property.service';
     MatMenuModule,
     MatButtonToggleModule,
     MatDividerModule,
+    RouterModule
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -48,7 +50,6 @@ export class HomeComponent implements OnInit {
   ];
 
   filteredProperties: any[] = [];
-
 
   constructor(
     private fb: FormBuilder,

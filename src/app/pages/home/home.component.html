@@ -81,6 +81,7 @@
   >
     @for (prop of filteredProperties; track $index) {
     <app-property-card
+      [routerLink]="'/' + prop.ref"
       [data]="prop"
     >
     </app-property-card>

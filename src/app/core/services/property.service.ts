@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class PropertyService {
   properties = [
     {
+      ref: '2938502',
       title: 'Condo moderne à Québec',
       location: 'Québec, QC',
       price: 345000,
@@ -16,6 +17,7 @@ export class PropertyService {
       ],
     },
     {
+      ref: '2938d02',
       title: 'Appartement à louer à Montréal',
       location: 'Montréal, QC',
       price: 1200,
@@ -26,6 +28,7 @@ export class PropertyService {
       ],
     },
     {
+      ref: '11098502',
       title: 'Condo moderne à Québec',
       location: 'Québec, QC',
       price: 345000,
@@ -36,6 +39,7 @@ export class PropertyService {
       ],
     },
     {
+      ref: '2938e0x',
       title: 'Appartement à louer à Montréal',
       location: 'Montréal, QC',
       price: 1200,
@@ -46,6 +50,7 @@ export class PropertyService {
       ],
     },
     {
+      ref: '29x233x85a',
       title: 'Appartement à louer à Montréal',
       location: 'Montréal, QC',
       price: 1200,
@@ -56,6 +61,7 @@ export class PropertyService {
       ],
     },
     {
+      ref: '29xxc38502',
       title: 'Appartement à louer à Montréal',
       location: 'Montréal, QC',
       price: 1200,
