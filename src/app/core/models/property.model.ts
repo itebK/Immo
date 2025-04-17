@@ -7,6 +7,7 @@ export class Property {
   price: number;
   images: string[];
   host: Host;
+  published: string;
   properties: any;
 
   constructor(data: any) {
@@ -16,6 +17,7 @@ export class Property {
     this.price = data.price;
     this.images = data.images;
     this.host = data.host;
+    this.published = data.published;
     this.properties =  {
       type: "Villa",
       yearBuilt: 2018,
