@@ -7,15 +7,15 @@
     space-between="10"
     style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;"
   >
-    <swiper-slide *ngFor="let img of images">
+    <swiper-slide *ngFor="let img of data.images">
       <img [src]="img" alt="Image" class="carousel-image" />
     </swiper-slide>
   </swiper-container>
 
   <!-- Contenu -->
   <mat-card-content>
-    <h3 class="title">{{ title }}</h3>
-    <p class="location">{{ location }}</p>
-    <p class="price">{{ price | currency:'CAD' }}</p>
+    <h3 class="title">{{ data.title }}</h3>
+    <p class="location">{{ data.location }}</p>
+    <p class="price">{{ data.price | currency:'CAD' }}</p>
   </mat-card-content>
 </mat-card>

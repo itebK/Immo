@@ -81,10 +81,7 @@
   >
     @for (prop of filteredProperties; track $index) {
     <app-property-card
-      [title]="prop.title"
-      [location]="prop.location"
-      [price]="prop.price"
-      [images]="prop.images"
+      [data]="prop"
     >
     </app-property-card>
     }

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Property } from '../../../core/models/property.model';
 
 
 @Component({
@@ -12,8 +13,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   schemas: [CUSTOM_ELEMENTS_SCHEMA] 
 })
 export class PropertyCardComponent {
-  @Input() title!: string;
-  @Input() location!: string;
-  @Input() price!: number;
-  @Input() images: string[] = [];
+  @Input() data!: Property;
+
+  // @Input() title!: string;
+  // @Input() location!: string;
+  // @Input() price!: number;
+  // @Input() images: string[] = [];
 }
