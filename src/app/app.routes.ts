@@ -9,7 +9,7 @@ export const routes: Routes = [
     path: 'landingPage',
     component: HomeComponent,
   },
-  { path: ':property', component: PropertyComponent },
+  { path: ':ref', component: PropertyComponent },
   // This should always be the last route
   { path: '**', component: PagenotfoundComponent }
 ];
