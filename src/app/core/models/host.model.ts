@@ -2,8 +2,8 @@ export class Host {
   id: string;
   name: string;
   image: string;
-  location: number;
-  about: string[];
+  location: string;
+  about: string;
 
   constructor(data: any) {
     this.id = data.id;
