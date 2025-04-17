@@ -1,0 +1,21 @@
+<mat-card >
+  <!-- Swiper -->
+  <swiper-container
+    pagination="true"
+    class="swiper"
+    slides-per-view="1"
+    space-between="10"
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;"
+  >
+    <swiper-slide *ngFor="let img of images">
+      <img [src]="img" alt="Image" class="carousel-image" />
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- Contenu -->
+  <mat-card-content>
+    <h3 class="title">{{ title }}</h3>
+    <p class="location">{{ location }}</p>
+    <p class="price">{{ price | currency:'CAD' }}</p>
+  </mat-card-content>
+</mat-card>

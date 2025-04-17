@@ -1,0 +1,57 @@
+.hero-section {
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+  
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+      width: 100%;
+    }
+  
+    .text-section {
+      margin-bottom: 2rem;
+  
+      .main-title {
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+  
+      .subtitle {
+        font-size: 1.1rem;
+        font-style: italic;
+        color: #666;
+      }
+    }
+  
+    .toggle-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+  
+      mat-form-field {
+        min-width: 200px;
+        flex: 1 1 200px;
+      }
+  
+      button {
+        align-self: center;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  

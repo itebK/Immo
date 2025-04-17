@@ -1,0 +1,36 @@
+.sidenav-container {
+    height: 100%;
+  min-height: auto; 
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .mobile-sidenav {
+    width: 250px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .toolbar-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  
+  .desktop-only {
+    display: none;
+  
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  
+  .hide-desktop {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  
