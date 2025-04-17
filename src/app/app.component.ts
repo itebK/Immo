@@ -1,6 +1,6 @@
 import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./pages/home.component";
+import { HomeComponent } from "./pages/home/home.component";
 import { PropertyCardComponent } from './shared/components/property-card/property-card.component';
 import { NavbarComponent } from './shared/components/navbar.component';
 
