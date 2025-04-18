@@ -6,7 +6,7 @@
     </div>
 
     <!-- gallery.component.html -->
-    <div style="height: 24rem;" class="overflow-hidden hidden md:block">
+    <div style="height: 24rem" class="overflow-hidden hidden md:block">
       <div class="grid justify-content-center">
         <!-- Main large image (left side) -->
         <div class="col-12 md:col-7 lg:col-5">
@@ -32,7 +32,7 @@
                     class="w-full h-full"
                   />
                 </div>
-                <div class="col-6 ">
+                <div class="col-6">
                   <img
                     [src]="data.images[2]"
                     [alt]="data.images[2]"
@@ -45,14 +45,14 @@
             <!-- Bottom right images -->
             <div class="col-12 md:col-12 lg:col-12">
               <div class="grid">
-                <div class="col-6 ">
+                <div class="col-6">
                   <img
                     [src]="data.images[3]"
                     [alt]="data.images[3]"
                     class="w-full h-full"
                   />
                 </div>
-                <div class="col-6 ">
+                <div class="col-6">
                   <img
                     [src]="data.images[4]"
                     [alt]="data.images[4]"
@@ -111,7 +111,10 @@
     <div class="grid">
       @for (detail of data.details; track $index) {
       <div class="col-12 md:col-6 text-color-secondary mb-2">
-        <strong>{{ detail.name }}</strong> {{ detail.value }}
+        <svg viewBox="0 0 640 512" style="width: 20px">
+          <path [attr.d]="detail.icon" />
+        </svg>
+        <strong> {{ detail.name }}</strong> {{ detail.value }}
       </div>
       }
     </div>
