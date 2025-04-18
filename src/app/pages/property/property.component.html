@@ -1,1 +1,119 @@
-<p>property works!</p>
+<div class="w-ful flex flex-column gap-5">
+  <div class="px-6" style="max-width: 1280px">
+    <!-- Header with title and action buttons -->
+    <div class="flex justify-content-between align-items-center mb-4 px-2">
+      <h1 class="text-3xl font-bold text-color">{{ data.title }}</h1>
+    </div>
+
+    <!-- gallery.component.html -->
+    <div style="height: 24rem;" class="overflow-hidden hidden md:block">
+      <div class="grid justify-content-center">
+        <!-- Main large image (left side) -->
+        <div class="col-12 md:col-7 lg:col-5">
+          <div>
+            <img
+              [src]="data.images[0]"
+              [alt]="data.images[0]"
+              class="w-full h-full"
+            />
+          </div>
+        </div>
+
+        <!-- Right side grid of smaller images -->
+        <div class="col-12 md:col-5 lg:col-5">
+          <div class="grid">
+            <!-- Top right images -->
+            <div class="col-12 md:col-12 lg:col-12">
+              <div class="grid">
+                <div class="col-6">
+                  <img
+                    [src]="data.images[1]"
+                    [alt]="data.images[1]"
+                    class="w-full h-full"
+                  />
+                </div>
+                <div class="col-6 ">
+                  <img
+                    [src]="data.images[2]"
+                    [alt]="data.images[2]"
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom right images -->
+            <div class="col-12 md:col-12 lg:col-12">
+              <div class="grid">
+                <div class="col-6 ">
+                  <img
+                    [src]="data.images[3]"
+                    [alt]="data.images[3]"
+                    class="w-full h-full"
+                  />
+                </div>
+                <div class="col-6 ">
+                  <img
+                    [src]="data.images[4]"
+                    [alt]="data.images[4]"
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile carousel version -->
+    <div class="block md:hidden">
+      <div class="relative overflow-hidden">
+        <img
+          [src]="data.images[0]"
+          alt="image"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Host Header Section -->
+  <div class="px-6" style="max-width: 1280px">
+    <div class="flex-1">
+      <h2 class="text-2xl md:text-3xl font-bold text-color">
+        {{ data.host.name }}
+      </h2>
+      <div class="flex flex-wrap gap-2 mt-2 text-sm">
+        <div class="flex align-items-center text-color-secondary">
+          <i class="pi pi-map-marker mr-2 text-sm"></i>
+          {{ data.host.location }}
+        </div>
+        <div class="flex align-items-center text-color-secondary">
+          <i class="pi pi-clock mr-2 text-sm"></i>
+          Published : {{ data.published }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Host About Section -->
+  <div class="px-6" style="max-width: 1280px">
+    <h2 class="text-xl font-semibold mb-3">About {{ data.host.name }}</h2>
+    <p class="text-color-secondary white-space-preline">
+      {{ data.host.about }}
+    </p>
+  </div>
+
+  <!-- Building Property Section -->
+  <div class="px-6" style="max-width: 1280px">
+    <h2 class="text-xl font-semibold mb-3">Property Details</h2>
+    <div class="grid">
+      @for (detail of data.details; track $index) {
+      <div class="col-12 md:col-6 text-color-secondary mb-2">
+        <strong>{{ detail.name }}</strong> {{ detail.value }}
+      </div>
+      }
+    </div>
+  </div>
+</div>

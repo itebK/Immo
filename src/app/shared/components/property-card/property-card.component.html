@@ -18,6 +18,6 @@
   <mat-card-content>
     <h3 class="title">{{ data.title }}</h3>
     <p class="location">{{ data.location }}</p>
-    <p class="price">{{ data.price | currency : "CAD" }}</p>
+    <p class="price">{{ data.price | currency : data.currency }}</p>
   </mat-card-content>
 </mat-card>

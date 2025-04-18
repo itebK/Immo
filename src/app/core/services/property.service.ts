@@ -12,7 +12,7 @@ export class PropertyService {
       title: 'Appartement S+3',
       location: 'Ennaser 2, Ariana',
       price: 2100,
-      currency: 'DT',
+      currency: 'TND',
       type: 'vente',
       details: [
         { name: 'type', value: 'villa' },

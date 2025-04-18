@@ -23,7 +23,7 @@
     </div>
 
     <form class="search-bar">
-      <mat-form-field appearance="outline" class="full-width">
+      <mat-form-field appearance="outline">
         <mat-label>
           <mat-icon>home</mat-icon>
           Résidentiel
@@ -81,6 +81,7 @@
   >
     @for (prop of filteredProperties; track $index) {
     <app-property-card
+      class="cursor-pointer"
       [routerLink]="'/' + prop.ref"
       [data]="prop"
     >
