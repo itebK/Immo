@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PropertyCardComponent } from '../../shared/components/property-card/property-card.component';
@@ -13,6 +13,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { PropertyService } from '../../core/services/property.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-home',
@@ -30,12 +31,29 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
     MatMenuModule,
     MatButtonToggleModule,
     MatDividerModule,
+    MatCardModule,
     RouterModule
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements OnInit {
+  // filteredProperties1 = [
+  //   {
+  //     images: ['https://via.placeholder.com/400x300'],
+  //     title: 'Maison moderne à vendre',
+  //     price: 685000,
+  //     address: '1240, 8e Rue',
+  //     city: 'Saint-Jérôme',
+  //     area: 'Quartier Saint-Antoine',
+  //     bedrooms: 3,
+  //     bathrooms: 2,
+  //     category: 'Maison à vendre',
+  //   },
+  //   // ... plus de propriétés
+  // ];
+  
   searchForm!: FormGroup;
   selectedType: 'vente' | 'location' = 'vente';
 

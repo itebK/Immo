@@ -1,5 +1,15 @@
-<mat-card>
+<mat-card class="centris-card">
+  <!-- Image -->
+  <!-- <div class="image-wrapper">
+    <img [src]="images[0]" alt="Photo" />
+    <div class="photo-count">
+      <span>{{ images.length }}</span>
+      <mat-icon>photo_camera</mat-icon>
+    </div>
+    <div *ngIf="isNew" class="new-badge">Nouvelle inscription</div>
+  </div> -->
   <!-- Swiper -->
+  <div class="image-wrapper">
   <swiper-container
     pagination="true"
     class="swiper"
@@ -7,17 +17,42 @@
     space-between="10"
     style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
   >
-    @for (img of data.images; track $index) {
+    @for (img of images; track $index) {
     <swiper-slide>
       <img [src]="img" alt="Image" class="carousel-image" />
     </swiper-slide>
     }
   </swiper-container>
+  <div class="photo-count">
+    <span>{{ images.length }}</span>
+    <mat-icon>photo_camera</mat-icon>
+  </div>
+  <div *ngIf="isNew" class="new-badge">Nouvelle inscription</div>
 
+</div>
   <!-- Contenu -->
   <mat-card-content>
-    <h3 class="title">{{ data.title }}</h3>
-    <p class="location">{{ data.location }}</p>
-    <p class="price">{{ data.price | currency : data.currency }}</p>
+    <div class="top-row">
+      <div class="price">{{ price | currency:currency }}</div>
+      <button mat-icon-button class="favorite-btn">
+        <mat-icon>favorite_border</mat-icon>
+      </button>      
+    </div>
+
+    <div class="type">{{ type }}</div>
+    <div class="address">
+      <div>{{ address }}</div>
+      <div>{{ city }}</div>
+      <div>{{ area }}</div>
+    </div>
+
+    <div class="features">
+      <div class="feature"><mat-icon>bed</mat-icon> {{ bedrooms }}</div>
+      <div class="feature"><mat-icon>bathtub</mat-icon> {{ bathrooms }}</div>
+      <div class="feature">
+        <mat-icon>straighten</mat-icon>
+        {{ surface }} m²
+      </div>
+    </div>
   </mat-card-content>
 </mat-card>

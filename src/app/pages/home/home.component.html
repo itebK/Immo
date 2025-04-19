@@ -73,7 +73,7 @@
       </app-property-card>
     </div>
   </section> -->
-<section class="px-4 sm:px-6 py-10">
+<!-- <section class="px-4 sm:px-6 py-10">
   <h2 class="text-xl font-bold mb-6">Propriétés à vendre</h2>
 
   <div
@@ -88,4 +88,49 @@
     </app-property-card>
     }
   </div>
+</section> -->
+<!-- <section class="property-section">
+  <h2 class="section-title">Propriétés à vendre</h2>
+
+  <div class="property-grid">
+    <mat-card *ngFor="let prop of filteredProperties" class="property-card">
+      <swiper-container slides-per-view="1" pagination="true" class="property-swiper">
+        @for (img of prop.images; track $index) {
+          <swiper-slide>
+            <img [src]="img" alt="Image" class="swiper-image" />
+          </swiper-slide>
+        }
+      </swiper-container>
+
+      <mat-card-content>
+        <h3>{{ prop.price | currency:'CAD' }}</h3>
+        <p>{{ prop.title }}</p>
+        <p>{{ prop.location }}</p>
+      </mat-card-content>
+    </mat-card>
+    
+  </div>
+</section> -->
+
+<section class="property-section">
+  <h2 class="section-title">Propriétés à vendre</h2>
+
+  <div class="property-grid">
+    <app-property-card
+      *ngFor="let prop of filteredProperties"
+      [images]="prop.images"
+      [title]="prop.title"
+      [type]="prop.type"
+      [price]="prop.price"
+      [currency]="prop.currency"
+      [address]="prop.address"
+      [city]="prop.city"
+      [area]="prop.area"
+      [bedrooms]="prop.bedrooms"
+      [bathrooms]="prop.bathrooms"
+      [surface]="prop.surface"
+    >
+    </app-property-card>
+  </div>
 </section>
+
