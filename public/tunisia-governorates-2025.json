@@ -1,0 +1,371 @@
+[
+  {
+    "region": "Tunis",
+    "delegations": [
+      "Bab El Bhar",
+      "Bab Souika",
+      "Carthage",
+      "Cité El Khadra",
+      "Djebel Jelloud",
+      "El Kabaria",
+      "El Menzah",
+      "El Omrane",
+      "El Omrane Supérieur",
+      "El Ouardia",
+      "Ettahrir",
+      "Ezzouhour",
+      "La Goulette",
+      "La Marsa",
+      "Le Bardo",
+      "Séjoumi",
+      "Sidi El Béchir",
+      "Sidi Hassine"
+    ]
+  },
+  {
+    "region": "Ariana",
+    "delegations": [
+      "Ariana Ville",
+      "Ettadhamen",
+      "Kalâat el-Andalous",
+      "La Soukra",
+      "Mnihla",
+      "Raoued",
+      "Sidi Thabet"
+    ]
+  },
+  {
+    "region": "Ben Arous",
+    "delegations": [
+      "Ben Arous",
+      "Bou Mhel el-Bassatine",
+      "El Mourouj",
+      "Ezzahra",
+      "Fouchana",
+      "Hammam Chatt",
+      "Hammam Lif",
+      "Mohamedia",
+      "Mornag",
+      "Radès"
+    ]
+  },
+  {
+    "region": "Manouba",
+    "delegations": [
+      "Borj El Amri",
+      "Djedeida",
+      "Douar Hicher",
+      "El Battan",
+      "Manouba",
+      "Mornaguia",
+      "Oued Ellil",
+      "Tebourba"
+    ]
+  },
+  {
+    "region": "Nabeul",
+    "delegations": [
+      "Béni Khiar",
+      "Dar Chaâbane El Fehri",
+      "El Haouaria",
+      "El Mida",
+      "Grombalia",
+      "Hammam Ghezèze",
+      "Hammamet",
+      "Kelibia",
+      "Korba",
+      "Menzel Bouzelfa",
+      "Menzel Temime",
+      "Nabeul",
+      "Soliman",
+      "Takelsa"
+    ]
+  },
+  {
+    "region": "Zaghouan",
+    "delegations": [
+      "Bir Mcherga",
+      "El Fahs",
+      "Nadhour",
+      "Saouaf",
+      "Zaghouan",
+      "Zriba"
+    ]
+  },
+  {
+    "region": "Bizerte",
+    "delegations": [
+      "Bizerte Nord",
+      "Bizerte Sud",
+      "El Alia",
+      "Ghar El Melh",
+      "Ghezala",
+      "Joumine",
+      "Mateur",
+      "Menzel Bourguiba",
+      "Menzel Jemil",
+      "Ras Jebel",
+      "Sejnane",
+      "Tinja",
+      "Utique"
+    ]
+  },
+  {
+    "region": "Béja",
+    "delegations": [
+      "Amdoun",
+      "Béja Nord",
+      "Béja Sud",
+      "Goubellat",
+      "Majaz al Bab",
+      "Nefza",
+      "Testour",
+      "Thibar"
+    ]
+  },
+  {
+    "region": "Jendouba",
+    "delegations": [
+      "Aïn Draham",
+      "Balta Bou Aouene",
+      "Bou Salem",
+      "Fernana",
+      "Ghardimaou",
+      "Jendouba Nord",
+      "Jendouba Sud",
+      "Oued Meliz",
+      "Tabarka"
+    ]
+  },
+  {
+    "region": "Le Kef",
+    "delegations": [
+      "Dahmani",
+      "El Ksour",
+      "Jerissa",
+      "Kalaa Khasbat",
+      "Kalaat Senan",
+      "Le Kef Est",
+      "Le Kef Ouest",
+      "Nebeur",
+      "Sakiet Sidi Youssef",
+      "Tajerouine"
+    ]
+  },
+  {
+    "region": "Siliana",
+    "delegations": [
+      "Bargou",
+      "Bou Arada",
+      "El Aroussa",
+      "El Krib",
+      "Gaâfour",
+      "Kesra",
+      "Makthar",
+      "Rouhia",
+      "Siliana Nord",
+      "Siliana Sud"
+    ]
+  },
+  {
+    "region": "Sousse",
+    "delegations": [
+      "Akouda",
+      "Bouficha",
+      "Enfidha",
+      "Hammam Sousse",
+      "Hergla",
+      "Kalâa Kebira",
+      "Kalâa Seghira",
+      "Kondar",
+      "Msaken",
+      "Sidi Bou Ali",
+      "Sidi El Hani",
+      "Sousse Jawhara",
+      "Sousse Médina",
+      "Sousse Riadh",
+      "Sousse Sidi Abdelhamid"
+    ]
+  },
+  {
+    "region": "Monastir",
+    "delegations": [
+      "Bekalta",
+      "Bembla",
+      "Beni Hassen",
+      "Jemmal",
+      "Ksar Hellal",
+      "Ksibet el-Médiouni",
+      "Moknine",
+      "Monastir",
+      "Ouardanine",
+      "Sahline",
+      "Sayada-Lamta-Bou Hajar",
+      "Téboulba",
+      "Zéramdine"
+    ]
+  },
+  {
+    "region": "Mahdia",
+    "delegations": [
+      "Bou Merdes",
+      "Chebba",
+      "Chorbane",
+      "El Djem",
+      "El Mahdia",
+      "Essouassi",
+      "Hiboun",
+      "Ksour Essef",
+      "Melloulèche",
+      "Ouled Chamekh",
+      "Sidi Alouane"
+    ]
+  },
+  {
+    "region": "Sfax",
+    "delegations": [
+      "Agareb",
+      "Bir Ali Ben Khalifa",
+      "El Amra",
+      "El Hancha",
+      "Ghraïba",
+      "Jebiniana",
+      "Kerkennah",
+      "Mahres",
+      "Menzel Chaker",
+      "Sakiet Eddaïer",
+      "Sakiet Ezzit",
+      "Sfax Medina",
+      "Sfax Ouest",
+      "Sfax Sud",
+      "Thyna"
+    ]
+  },
+  {
+    "region": "Kairouan",
+    "delegations": [
+      "Bou Hajla",
+      "Chebika",
+      "El Alâa",
+      "Echrarda",
+      "Haffouz",
+      "Hajeb El Ayoun",
+      "Kairouan Nord",
+      "Kairouan Sud",
+      "Nasrallah",
+      "Oueslatia",
+      "Sbikha"
+    ]
+  },
+  {
+    "region": "Kasserine",
+    "delegations": [
+      "Ezzouhour",
+      "Fériana",
+      "Foussana",
+      "Hassi El Ferid",
+      "Hidra",
+      "Jedelienne",
+      "Kasserine Nord",
+      "Kasserine Sud",
+      "Majel Bel Abbès",
+      "Sbeitla",
+      "Sbiba",
+      "Thala"
+    ]
+  },
+  {
+    "region": "Sidi Bouzid",
+    "delegations": [
+      "Bir El Hafey",
+      "Jelma",
+      "Menzel Bouzaiane",
+      "Meknassy",
+      "Ouled Haffouz",
+      "Regueb",
+      "Sidi Ali Ben Aoun",
+      "Sidi Bouzid Est",
+      "Sidi Bouzid Ouest",
+      "Souk Jedid"
+    ]
+  },
+  {
+    "region": "Gabès",
+    "delegations": [
+      "Gabès Médina",
+      "Gabès Ouest",
+      "Gabès Sud",
+      "Ghannouch",
+      "Mareth",
+      "Matmata",
+      "Matmata Nouvelle",
+      "Menzel El Habib",
+      "Métouia",
+      "Nouvelle Matmata"
+    ]
+  },
+  {
+    "region": "Medenine",
+    "delegations": [
+      "Ben Gardane",
+      "Beni Khedache",
+      "Djerba Ajim",
+      "Djerba Houmt Souk",
+      "Djerba Midoun",
+      "Médenine Nord",
+      "Médenine Sud",
+      "Sidi Makhlouf",
+      "Zarzis"
+    ]
+  },
+  {
+    "region": "Tataouine",
+    "delegations": [
+      "Bir Lahmar",
+      "Dehiba",
+      "Ghomrassen",
+      "Remada",
+      "Smar",
+      "Tataouine Nord",
+      "Tataouine Sud"
+    ]
+  },
+  {
+    "region": "Gafsa",
+    "delegations": [
+      "Belkhir",
+      "El Guettar",
+      "El Ksar",
+      "El Mdhilla",
+      "Gafsa Nord",
+      "Gafsa Sud",
+      "Metlaoui",
+      "Moularès",
+      "Redeyef",
+      "Sidi Aïch",
+      "Sned"
+    ]
+  },
+  {
+    "region": "Tozeur",
+    "delegations": [
+      "Degache",
+      "Hazoua",
+      "Nefta",
+      "Tameghza",
+      "Tozeur"
+    ]
+  },
+  {
+    "region": "Kebili",
+    "delegations": [
+      "Bechri",
+      "Douz Nord",
+      "Douz Sud",
+      "Faouar",
+      "Kebili Nord",
+      "Kebili Sud",
+      "Souk Lahad"
+    ]
+  }
+]

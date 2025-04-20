@@ -10,10 +10,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatDivider, MatDividerModule } from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { PropertyService } from '../../core/services/property.service';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { Property } from '../../core/models/property.model';
+import { SearchBarComponent } from '../../shared/components/search-bar/search-bar.component';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     ReactiveFormsModule,
     PropertyCardComponent,
+    SearchBarComponent,
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
@@ -32,76 +35,55 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonToggleModule,
     MatDividerModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
   ],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements OnInit {
-  // filteredProperties1 = [
-  //   {
-  //     images: ['https://via.placeholder.com/400x300'],
-  //     title: 'Maison moderne à vendre',
-  //     price: 685000,
-  //     address: '1240, 8e Rue',
-  //     city: 'Saint-Jérôme',
-  //     area: 'Quartier Saint-Antoine',
-  //     bedrooms: 3,
-  //     bathrooms: 2,
-  //     category: 'Maison à vendre',
-  //   },
-  //   // ... plus de propriétés
-  // ];
-  
   searchForm!: FormGroup;
-  selectedType: 'vente' | 'location' = 'vente';
 
-  regions = [
-    { value: 'tunis', label: 'Grand Tunis' },
-    { value: 'sousse', label: 'Sousse' },
-  ];
+  allProperties: Property[] = [];
+  filteredProperties: Property[] = [];
 
-  cities = [
-    { value: 'ariana', label: 'Ariana' },
-    { value: 'manouba', label: 'Manouba' },
-  ];
-
-  filteredProperties: any[] = [];
-
-  constructor(
-    private fb: FormBuilder,
-    private propertyService: PropertyService
-  ) {}
+  constructor(private fb: FormBuilder, private propertyService: PropertyService) {}
 
   ngOnInit(): void {
-    this.filteredProperties = this.propertyService.getProperties();
-
     this.searchForm = this.fb.group({
       region: [''],
-      municipalite: [''],
+      delegation: [''],
     });
-    // this.searchForm = this.fb.group({
-    //   location: [''],
-    //   type: [''],
-    //   minPrice: [''],
-    //   maxPrice: ['']
-    // });
+
+    this.propertyService.getAllProperties().subscribe((properties) => {
+      this.allProperties = properties;
+      this.filteredProperties = [...properties];
+    });
   }
 
-  onSearch(): void {
-    const { location, type, minPrice, maxPrice } = this.searchForm.value;
-
-    this.filteredProperties = this.propertyService
-      .getProperties()!
-      .filter((p) => {
-        const matchLocation = location
-          ? p.location.toLowerCase().includes(location.toLowerCase())
-          : true;
-        const matchType = type ? p.type === type : true;
-        const matchMin = minPrice ? p.price >= minPrice : true;
-        const matchMax = maxPrice ? p.price <= maxPrice : true;
-        return matchLocation && matchType && matchMin && matchMax;
+  onSearch(filters: any): void {
+    console.log(filters);
+    this.propertyService.getAllProperties().subscribe((properties) => {
+      const regionFilter = filters.region?.toLowerCase().trim();
+      const delegationFilter = filters.delegation?.toLowerCase().trim();
+      const categoryFilter = filters.category.toLowerCase();
+      const typeFilter = filters.type.toLowerCase();
+  
+      this.filteredProperties = properties.filter((property) => {
+        const matchesRegion = !regionFilter || property.region.toLowerCase().includes(regionFilter);
+        const matchesDelegation = !delegationFilter || property.delegation.toLowerCase().includes(delegationFilter);
+        const matchesCategory = !categoryFilter || property.category === categoryFilter;
+        const matchesType = !typeFilter || property.mode === typeFilter;
+  
+        return matchesRegion && matchesDelegation && matchesCategory && matchesType;
       });
+
+      setTimeout(() => {
+      if (filters.onComplete) {
+        filters.onComplete();
+      }
+    }, 1000);
+    });
   }
+   
 }

@@ -1,0 +1,65 @@
+<section class="search-banner">
+  <div class="search-container">
+    <!-- Barre de recherche -->
+    <form class="search-bar" [formGroup]="searchForm" (ngSubmit)="submit()">
+      
+      <!-- Titre principal -->
+      <div class="search-header">
+        <h1 class="search-title">NOUS TROUVONS VOTRE BIEN PARTOUT</h1>
+        <p class="search-subtitle">(OU PRESQUE)</p>
+      </div>
+
+      <!-- Sélection du type de transaction -->
+      <div class="search-type-toggle">
+        <mat-button-toggle-group formControlName="type" >
+          <mat-button-toggle *ngFor="let type of propertyTypes" [value]="type.value">
+            <mat-icon fontIcon="{{ type.icon }}"></mat-icon>
+            {{ type.label }}
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+
+
+      <!-- Type de bien -->
+      <mat-form-field appearance="outline">
+        <mat-label>Type de bien</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let cat of propertyCategories" [value]="cat.value">
+            <mat-icon>{{ cat.icon }}</mat-icon>
+            {{ cat.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Région avec autocomplete -->
+      <mat-form-field appearance="outline">
+        <mat-label>Région</mat-label>
+        <input matInput formControlName="region" placeholder="Choisir une région" [matAutocomplete]="regionAuto" />
+        <mat-autocomplete #regionAuto="matAutocomplete">
+          <mat-option *ngFor="let region of filteredRegions | async" [value]="region.region">
+            {{ region.region }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <!-- Délégation avec autocomplete -->
+      <mat-form-field appearance="outline">
+        <mat-label>Délégation</mat-label>
+        <input matInput formControlName="delegation" placeholder="Choisir une délégation"
+          [matAutocomplete]="delegationAuto" />
+        <mat-autocomplete #delegationAuto="matAutocomplete">
+          <mat-option *ngFor="let d of filteredDelegations | async" [value]="d">
+            {{ d }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <!-- Bouton recherche -->
+      <button class="search-btn" type="submit" color="primary" aria-label="Rechercher">
+        <mat-icon *ngIf="!isLoading">search</mat-icon>
+        <mat-spinner *ngIf="isLoading" diameter="24" strokeWidth="3"></mat-spinner>
+      </button>
+
+    </form>
+  </div>
+</section>

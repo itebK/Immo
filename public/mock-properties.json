@@ -1,0 +1,1550 @@
+[
+  {
+    "id": "prop-1",
+    "title": "R\u00e9sidentiel vente \u00e0 Bab El Bhar",
+    "price": 246462,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "vente",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "88 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-1",
+      "name": "H\u00f4te 1",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "surface": "133",
+      "constructionYear": 2003,
+      "lotArea": "706",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-2",
+    "title": "R\u00e9sidentiel vente \u00e0 Carthage",
+    "price": 319483,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "vente",
+    "propertyType": "residentiel",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "100 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-2",
+      "name": "H\u00f4te 2",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "surface": "100",
+      "constructionYear": 2020,
+      "lotArea": "521",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-3",
+    "title": "R\u00e9sidentiel vente \u00e0 Ariana Ville",
+    "price": 130921,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "vente",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "57 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-3",
+      "name": "H\u00f4te 3",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "surface": "242",
+      "constructionYear": 1998,
+      "lotArea": "794",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-4",
+    "title": "R\u00e9sidentiel vente \u00e0 Mornag",
+    "price": 270795,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "vente",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "75 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-4",
+      "name": "H\u00f4te 4",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "surface": "139",
+      "constructionYear": 1991,
+      "lotArea": "786",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-5",
+    "title": "Commercial vente \u00e0 Bab El Bhar",
+    "price": 469781,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "vente",
+    "propertyType": "commercial",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "34 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-5",
+      "name": "H\u00f4te 5",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 5,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "surface": "154",
+      "constructionYear": 1990,
+      "lotArea": "847",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-6",
+    "title": "Commercial vente \u00e0 Carthage",
+    "price": 245145,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "vente",
+    "propertyType": "commercial",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "47 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-6",
+      "name": "H\u00f4te 6",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "surface": "213",
+      "constructionYear": 2017,
+      "lotArea": "691",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-7",
+    "title": "Commercial vente \u00e0 Ariana Ville",
+    "price": 262398,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "vente",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "68 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-7",
+      "name": "H\u00f4te 7",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 6,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "surface": "165",
+      "constructionYear": 1998,
+      "lotArea": "784",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-8",
+    "title": "Commercial vente \u00e0 Mornag",
+    "price": 383629,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "vente",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "45 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-8",
+      "name": "H\u00f4te 8",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "surface": "186",
+      "constructionYear": 2017,
+      "lotArea": "804",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-9",
+    "title": "Agricole vente \u00e0 Bab El Bhar",
+    "price": 457495,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "vente",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "54 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-9",
+      "name": "H\u00f4te 9",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 6,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "185",
+      "constructionYear": 2001,
+      "lotArea": "595",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-10",
+    "title": "Agricole vente \u00e0 Carthage",
+    "price": 277746,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "vente",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "6 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-10",
+      "name": "H\u00f4te 10",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 5,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "180",
+      "constructionYear": 1993,
+      "lotArea": "570",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-11",
+    "title": "Agricole vente \u00e0 Ariana Ville",
+    "price": 242541,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "vente",
+    "propertyType": "agricole",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "13 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-11",
+      "name": "H\u00f4te 11",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 6,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "surface": "254",
+      "constructionYear": 2007,
+      "lotArea": "215",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-12",
+    "title": "Agricole vente \u00e0 Mornag",
+    "price": 256399,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "vente",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "50 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-12",
+      "name": "H\u00f4te 12",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "262",
+      "constructionYear": 2000,
+      "lotArea": "322",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-13",
+    "title": "R\u00e9sidentiel location \u00e0 Bab El Bhar",
+    "price": 140526,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "location",
+    "propertyType": "residentiel",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "32 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-13",
+      "name": "H\u00f4te 13",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "surface": "168",
+      "constructionYear": 2009,
+      "lotArea": "544",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-14",
+    "title": "R\u00e9sidentiel location \u00e0 Carthage",
+    "price": 102211,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "location",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "2 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-14",
+      "name": "H\u00f4te 14",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "227",
+      "constructionYear": 2008,
+      "lotArea": "400",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-15",
+    "title": "R\u00e9sidentiel location \u00e0 Ariana Ville",
+    "price": 417525,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "location",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "83 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-15",
+      "name": "H\u00f4te 15",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 6,
+      "bedrooms": 1,
+      "bathrooms": 3,
+      "surface": "217",
+      "constructionYear": 2020,
+      "lotArea": "414",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-16",
+    "title": "R\u00e9sidentiel location \u00e0 Mornag",
+    "price": 436502,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "location",
+    "propertyType": "residentiel",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "99 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-16",
+      "name": "H\u00f4te 16",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "surface": "220",
+      "constructionYear": 2004,
+      "lotArea": "707",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-17",
+    "title": "Commercial location \u00e0 Bab El Bhar",
+    "price": 476566,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "location",
+    "propertyType": "commercial",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "6 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-17",
+      "name": "H\u00f4te 17",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "surface": "88",
+      "constructionYear": 1998,
+      "lotArea": "417",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-18",
+    "title": "Commercial location \u00e0 Carthage",
+    "price": 442780,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "location",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "11 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-18",
+      "name": "H\u00f4te 18",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 5,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "surface": "118",
+      "constructionYear": 2004,
+      "lotArea": "698",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-19",
+    "title": "Commercial location \u00e0 Ariana Ville",
+    "price": 374134,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "location",
+    "propertyType": "commercial",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "27 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-19",
+      "name": "H\u00f4te 19",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "surface": "226",
+      "constructionYear": 2009,
+      "lotArea": "706",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-20",
+    "title": "Commercial location \u00e0 Mornag",
+    "price": 433627,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "location",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "31 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-20",
+      "name": "H\u00f4te 20",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "surface": "145",
+      "constructionYear": 2018,
+      "lotArea": "552",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-21",
+    "title": "Agricole location \u00e0 Bab El Bhar",
+    "price": 105693,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "location",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "82 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-21",
+      "name": "H\u00f4te 21",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "surface": "182",
+      "constructionYear": 2003,
+      "lotArea": "885",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-22",
+    "title": "Agricole location \u00e0 Carthage",
+    "price": 319047,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "location",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "53 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-22",
+      "name": "H\u00f4te 22",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "surface": "154",
+      "constructionYear": 2004,
+      "lotArea": "1000",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-23",
+    "title": "Agricole location \u00e0 Ariana Ville",
+    "price": 356560,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "location",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "18 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-23",
+      "name": "H\u00f4te 23",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "surface": "154",
+      "constructionYear": 2007,
+      "lotArea": "263",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-24",
+    "title": "Agricole location \u00e0 Mornag",
+    "price": 412027,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "location",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "4 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-24",
+      "name": "H\u00f4te 24",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "surface": "165",
+      "constructionYear": 2016,
+      "lotArea": "695",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-25",
+    "title": "R\u00e9sidentiel courte \u00e0 Bab El Bhar",
+    "price": 400050,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "courte",
+    "propertyType": "residentiel",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "99 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-25",
+      "name": "H\u00f4te 25",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 6,
+      "bedrooms": 1,
+      "bathrooms": 3,
+      "surface": "80",
+      "constructionYear": 1997,
+      "lotArea": "423",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-26",
+    "title": "R\u00e9sidentiel courte \u00e0 Carthage",
+    "price": 190184,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "courte",
+    "propertyType": "residentiel",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "5 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-26",
+      "name": "H\u00f4te 26",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "surface": "269",
+      "constructionYear": 2010,
+      "lotArea": "435",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-27",
+    "title": "R\u00e9sidentiel courte \u00e0 Ariana Ville",
+    "price": 472597,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "courte",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "46 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-27",
+      "name": "H\u00f4te 27",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 5,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "surface": "136",
+      "constructionYear": 1991,
+      "lotArea": "879",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-28",
+    "title": "R\u00e9sidentiel courte \u00e0 Mornag",
+    "price": 201154,
+    "currency": "TND",
+    "category": "residentiel",
+    "mode": "courte",
+    "propertyType": "residentiel",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "56 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-28",
+      "name": "H\u00f4te 28",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "surface": "88",
+      "constructionYear": 1995,
+      "lotArea": "640",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-29",
+    "title": "Commercial courte \u00e0 Bab El Bhar",
+    "price": 386343,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "courte",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "63 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-29",
+      "name": "H\u00f4te 29",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 5,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "292",
+      "constructionYear": 2017,
+      "lotArea": "860",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-30",
+    "title": "Commercial courte \u00e0 Carthage",
+    "price": 199649,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "courte",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "9 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-30",
+      "name": "H\u00f4te 30",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "surface": "153",
+      "constructionYear": 2013,
+      "lotArea": "654",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-31",
+    "title": "Commercial courte \u00e0 Ariana Ville",
+    "price": 118678,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "courte",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "92 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-31",
+      "name": "H\u00f4te 31",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "surface": "190",
+      "constructionYear": 2003,
+      "lotArea": "786",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-32",
+    "title": "Commercial courte \u00e0 Mornag",
+    "price": 242743,
+    "currency": "TND",
+    "category": "commercial",
+    "mode": "courte",
+    "propertyType": "commercial",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "86 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-32",
+      "name": "H\u00f4te 32",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "surface": "90",
+      "constructionYear": 2003,
+      "lotArea": "612",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-33",
+    "title": "Agricole courte \u00e0 Bab El Bhar",
+    "price": 157140,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "courte",
+    "propertyType": "agricole",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "2 Rue Exemple",
+    "delegation": "Bab El Bhar",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-33",
+      "name": "H\u00f4te 33",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 4,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "204",
+      "constructionYear": 1990,
+      "lotArea": "490",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-34",
+    "title": "Agricole courte \u00e0 Carthage",
+    "price": 219240,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "courte",
+    "propertyType": "agricole",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "49 Rue Exemple",
+    "delegation": "Carthage",
+    "region": "Tunis",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-34",
+      "name": "H\u00f4te 34",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "surface": "265",
+      "constructionYear": 1994,
+      "lotArea": "445",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-35",
+    "title": "Agricole courte \u00e0 Ariana Ville",
+    "price": 171760,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "courte",
+    "propertyType": "agricole",
+    "isNew": true,
+    "published": "2025-04-19",
+    "address": "17 Rue Exemple",
+    "delegation": "Ariana Ville",
+    "region": "Ariana",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-35",
+      "name": "H\u00f4te 35",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "agence"
+    },
+    "details": {
+      "totalRooms": 7,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "surface": "132",
+      "constructionYear": 1994,
+      "lotArea": "373",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  },
+  {
+    "id": "prop-36",
+    "title": "Agricole courte \u00e0 Mornag",
+    "price": 349882,
+    "currency": "TND",
+    "category": "agricole",
+    "mode": "courte",
+    "propertyType": "agricole",
+    "isNew": false,
+    "published": "2025-04-19",
+    "address": "54 Rue Exemple",
+    "delegation": "Mornag",
+    "region": "Ben Arous",
+    "location": "36.8065, 10.1815",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "host": {
+      "id": "host-36",
+      "name": "H\u00f4te 36",
+      "image": "",
+      "location": "Tunisie",
+      "about": "Agence exp\u00e9riment\u00e9e",
+      "type": "particulier"
+    },
+    "details": {
+      "totalRooms": 3,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "surface": "300",
+      "constructionYear": 2018,
+      "lotArea": "544",
+      "zoning": null,
+      "commercialType": null,
+      "soilType": null,
+      "irrigationAvailable": false,
+      "agriculturalUse": null,
+      "technicalImages": [
+        "https://images.unsplash.com/photo-1613977257363-bfcdeec0b9c1?auto=format&fit=crop&w=800&q=80"
+      ]
+    }
+  }
+]

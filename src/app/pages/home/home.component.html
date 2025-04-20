@@ -1,136 +1,21 @@
-<section class="hero-section">
-  <div class="hero-container">
-    <div class="text-section">
-      <h1 class="main-title">NOUS TROUVONS VOTRE MAISON PARTOUT</h1>
-      <p class="subtitle">(OU PRESQUE)</p>
-    </div>
-
-    <div class="toggle-section">
-      <button
-        mat-button
-        [disabled]="selectedType === 'vente'"
-        (click)="selectedType = 'vente'"
-      >
-        VENTE
-      </button>
-      <button
-        mat-button
-        [disabled]="selectedType === 'location'"
-        (click)="selectedType = 'location'"
-      >
-        LOCATION
-      </button>
-    </div>
-
-    <form class="search-bar">
-      <mat-form-field appearance="outline">
-        <mat-label>
-          <mat-icon>home</mat-icon>
-          Résidentiel
-        </mat-label>
-        <mat-select [(value)]="selectedType">
-          <mat-option value="residentiel">
-            <mat-icon>home</mat-icon>
-            Résidentiel
-          </mat-option>
-          <mat-option value="commercial">
-            <mat-icon>apartment</mat-icon>
-            Commercial
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-        <mat-label>Régions</mat-label>
-        <mat-select>
-          <mat-option value="">--</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-        <mat-label>Municipalités</mat-label>
-        <mat-select>
-          <mat-option value="">--</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <button mat-icon-button type="submit" aria-label="Rechercher">
-        <mat-icon>search</mat-icon>
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- <section class="px-4 sm:px-6 py-10">
-    <h2 class="text-xl font-bold mb-4">Propriétés à vendre</h2>
-    <div class="flex flex-col sm:flex-row gap-4 overflow-x-auto scrollbar-hide">
-      <app-property-card
-        *ngFor="let prop of filteredProperties"
-        [title]="prop.title"
-        [location]="prop.location"
-        [price]="prop.price"
-        [images]="prop.images">
-      </app-property-card>
-    </div>
-  </section> -->
-<!-- <section class="px-4 sm:px-6 py-10">
-  <h2 class="text-xl font-bold mb-6">Propriétés à vendre</h2>
-
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-  >
-    @for (prop of filteredProperties; track $index) {
-    <app-property-card
-      class="cursor-pointer"
-      [routerLink]="'/' + prop.ref"
-      [data]="prop"
-    >
-    </app-property-card>
-    }
-  </div>
-</section> -->
-<!-- <section class="property-section">
-  <h2 class="section-title">Propriétés à vendre</h2>
-
-  <div class="property-grid">
-    <mat-card *ngFor="let prop of filteredProperties" class="property-card">
-      <swiper-container slides-per-view="1" pagination="true" class="property-swiper">
-        @for (img of prop.images; track $index) {
-          <swiper-slide>
-            <img [src]="img" alt="Image" class="swiper-image" />
-          </swiper-slide>
-        }
-      </swiper-container>
-
-      <mat-card-content>
-        <h3>{{ prop.price | currency:'CAD' }}</h3>
-        <p>{{ prop.title }}</p>
-        <p>{{ prop.location }}</p>
-      </mat-card-content>
-    </mat-card>
-    
-  </div>
-</section> -->
-
+<app-search-bar (searchSubmitted)="onSearch($event)"></app-search-bar>
 <section class="property-section">
   <h2 class="section-title">Propriétés à vendre</h2>
 
   <div class="property-grid">
-    <app-property-card
-      *ngFor="let prop of filteredProperties"
-      [images]="prop.images"
-      [title]="prop.title"
-      [type]="prop.type"
-      [price]="prop.price"
-      [currency]="prop.currency"
-      [address]="prop.address"
-      [city]="prop.city"
-      [area]="prop.area"
-      [bedrooms]="prop.bedrooms"
-      [bathrooms]="prop.bathrooms"
-      [surface]="prop.surface"
-    >
-    </app-property-card>
+    <ng-container *ngIf="filteredProperties.length > 0; else noResults">
+      <div
+        *ngFor="let prop of filteredProperties"
+        class="property-wrapper"
+        [routerLink]="'/propriete/' + prop.id"
+        style="cursor: pointer;"
+      >
+        <app-property-card [data]="prop"></app-property-card>
+      </div>
+    </ng-container>
+  
+    <ng-template #noResults>
+      <p class="no-results">Aucune propriété trouvée.</p>
+    </ng-template>
   </div>
 </section>
-

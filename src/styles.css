@@ -15,7 +15,7 @@
   font-display: swap;
 }
 
-html, body { height: 100%; }
+html, body { margin: 0; }
 body {
     font-family: 'Onest','Rubik', sans-serif;
   }

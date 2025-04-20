@@ -1,15 +1,11 @@
-export class Host {
+// 👤 Informations sur l'hôte (propriétaire ou agence)
+export type HostType = 'agence' | 'particulier';
+
+export interface Host {
   id: string;
   name: string;
-  image: string;
+  image?: string;
   location: string;
   about: string;
-
-  constructor(data: any) {
-    this.id = data.id;
-    this.name = data.name;
-    this.image = data.image;
-    this.location = data.location;
-    this.about = data.about;
-  }
+  type: HostType;
 }
