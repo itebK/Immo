@@ -1,5 +1,9 @@
 .search-banner {
-  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+  background-image: url('https://cdn.centris.ca/public/qc/consumersite/images/Search_bg/Tablette-chalet-ile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   padding: 4rem 1rem;
   display: flex;
   justify-content: center;
@@ -37,11 +41,12 @@
 
 mat-button-toggle-group {
   border-radius: 6px !important;
-  overflow: hidden; 
+  overflow: hidden;
 }
+
 mat-button-toggle.mat-button-toggle-checked {
   background-color: #e0e7ff;
-  color: #1e1e1e;
+  color: white;
 }
 
 mat-button-toggle.mat-button-toggle-checked .selected-check {
@@ -49,8 +54,8 @@ mat-button-toggle.mat-button-toggle-checked .selected-check {
   margin-right: 4px;
 }
 
-.mat-mdc-form-field{
-  margin-right: 2px!important;
+.mat-mdc-form-field {
+  margin-right: 2px !important;
 }
 
 
@@ -68,7 +73,7 @@ mat-button-toggle.mat-button-toggle-checked .selected-check {
   height: 56px;
   width: 56px;
   border-radius: 12px;
-  background-color: #e0e7ff;
+  background-color: #4873ff;
   cursor: pointer;
   border-width: 0;
   display: flex;
@@ -79,10 +84,18 @@ mat-button-toggle.mat-button-toggle-checked .selected-check {
 .search-btn:hover {
   background-color: #c7d2fe;
 }
+
 .search-btn:active {
   background-color: #e0e7ff;
 }
 
+.white-font {
+  color: white;
+}
+
+.mat-button-toggle-appearance-standard {
+  color: #ffffff;
+}
 
 @media (max-width: 600px) {
   .search-bar {
