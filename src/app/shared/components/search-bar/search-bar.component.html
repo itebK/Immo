@@ -1,7 +1,7 @@
 <section class="search-banner">
   <div class="search-container">
     <!-- Barre de recherche -->
-    <form class="search-bar" [formGroup]="searchForm" (ngSubmit)="submit()">
+    <form class="search-bar" [formGroup]="searchForm" (ngSubmit)="submit()" (reset)="resetForm()">
 
       <!-- Titre principal -->
       <div class="search-header">

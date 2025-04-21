@@ -117,9 +117,15 @@ export class HomeComponent implements OnInit {
       this.visibleProperties = this.filteredProperties.slice(0, this.step);
       this.allLoaded = this.visibleProperties.length >= this.filteredProperties.length;
 
-      if (filters.onComplete) {
+      // if (filters.onComplete) {
+      //   setTimeout(() => filters.onComplete(), 500);
+      // }
+      if (typeof filters.onComplete === 'function') {
         setTimeout(() => filters.onComplete(), 500);
+      } else {
+        console.warn('onComplete manquant après reset');
       }
+      
     });
   }
 

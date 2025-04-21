@@ -126,7 +126,21 @@ export class SearchBarComponent {
 
     this.searchSubmitted.emit({
       ...filters,
-      onComplete: () => this.isLoading = false
+      onComplete: () => {
+        this.isLoading = false;
+      }
     });
+  }
+
+  resetForm(): void {
+    this.isLoading = false;
+
+    this.searchForm.reset({
+      category: '',
+      type: '',
+      region: '',
+      delegation: ''
+    });
+
   }
 }
