@@ -8,6 +8,7 @@ import { PropertyDetails } from './details.model';
 export class Property {
   id: string;                           // Référence unique
   title: string;                        // Titre de l’annonce
+  description: string;
   price: number;
   currency: string;
 
@@ -32,6 +33,7 @@ export class Property {
   constructor(data: any) {
     this.id = data.id;
     this.title = data.title;
+    this.description = data.description;
     this.price = data.price;
     this.currency = data.currency;
 
