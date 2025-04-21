@@ -7,9 +7,10 @@ import { Property } from '../models/property.model';
   providedIn: 'root',
 })
 export class PropertyService {
-  private jsonUrl = 'mock-properties.json';
+  // private jsonUrl = 'mock-properties.json';
+  private jsonUrl = 'mock-properties-with-guids.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // 🔄 Récupérer toutes les propriétés depuis le JSON local
   getAllProperties(): Observable<Property[]> {

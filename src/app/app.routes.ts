@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PagenotfoundComponent } from './pages/404notfound/pagenotfound.component';
-import { PropertyCardComponent } from './shared/components/property-card/property-card.component';
+import { PropertyDetailComponent } from './shared/components/property-detail/property-detail.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -9,7 +9,7 @@ export const routes: Routes = [
     path: 'landingPage',
     component: HomeComponent,
   },
-  { path: ':ref', component: PropertyCardComponent },
+  { path: 'details/:id', component: PropertyDetailComponent },
   // This should always be the last route
   { path: '**', component: PagenotfoundComponent }
 ];

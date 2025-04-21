@@ -1,0 +1,39 @@
+<!-- Aperçu grille -->
+<div class="gallery-preview">
+    <div class="main-image" (click)="openFullscreen(0)">
+      <img [src]="images[0]" alt="Image principale" />
+    </div>
+  
+    <div class="thumbnail-grid">
+      <div class="thumbnail" *ngFor="let img of images.slice(1, 5); let i = index" (click)="openFullscreen(i + 1)">
+        <img [src]="img" alt="Image" />
+      </div>
+  
+      <div class="show-all" *ngIf="images.length > 5" (click)="openFullscreen(0)">
+        <span>+ {{ images.length - 5 }} photos</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Swiper en plein écran -->
+  <div class="fullscreen-overlay" *ngIf="showFullscreen">
+    <button class="close-btn" mat-icon-button (click)="closeFullscreen()">
+      <mat-icon>close</mat-icon>
+    </button>
+  
+    <swiper-container
+      [zoom]="true"
+      navigation="true"
+      pagination="true"
+      [initial-slide]="selectedIndex"
+      class="fullscreen-swiper"
+      style="--swiper-pagination-color: white"
+    >
+      <swiper-slide *ngFor="let img of images">
+        <div class="swiper-zoom-container">
+          <img [src]="img" alt="Zoom image" />
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  

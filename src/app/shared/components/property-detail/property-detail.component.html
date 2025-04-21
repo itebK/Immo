@@ -1,0 +1,55 @@
+<div class="property-detail-card" *ngIf="property">
+    <mat-card>
+        <!-- Images -->
+        <app-property-detail-gallery [images]="property.images || []"></app-property-detail-gallery>
+        <div class="card-content">
+            <!-- Informations principales -->
+            <mat-card-title>{{ property.title }}</mat-card-title>
+            <div class="location">{{ property.address }}, {{ property.delegation }}, {{ property.region }}</div>
+            <div class="price">{{ property.price | currency:property.currency }}</div>
+
+            <mat-divider></mat-divider>
+
+            <!-- Caractéristiques -->
+            <div class="characteristics">
+                <div>
+                    <mat-icon>house</mat-icon> {{ property.propertyType }}
+                </div>
+                <div>
+                    <mat-icon>calendar_today</mat-icon> {{ property.details.constructionYear || '-' }}
+                </div>
+                <div>
+                    <mat-icon>straighten</mat-icon> {{ property.details.surface }} m²
+                </div>
+                <div>
+                    <mat-icon>terrain</mat-icon> {{ property.details.lotArea }} m²
+                </div>
+                <div>
+                    <mat-icon>bed</mat-icon> {{ property.details.bedrooms }} chambres
+                </div>
+                <div>
+                    <mat-icon>bathtub</mat-icon> {{ property.details.bathrooms }} salles de bain
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <!-- Description -->
+            <section class="description">
+                <h3>Description</h3>
+                <!-- <p>{{ property.description }}</p> -->
+            </section>
+
+            <!-- Détails financiers (optionnel) -->
+            <!-- <section class="financial-details" *ngIf="property.details.taxes"> -->
+            <h3>Détails financiers</h3>
+            <div>
+                <!-- <strong>Taxes municipales :</strong> {{ property.details.taxes.municipales | currency:'TND' }} -->
+            </div>
+            <div>
+                <!-- <strong>Électricité :</strong> {{ property.details.taxes.electricite | currency:'TND' }} -->
+            </div>
+            <!-- </section> -->
+        </div>
+    </mat-card>
+</div>
