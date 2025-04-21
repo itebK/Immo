@@ -1,5 +1,4 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PropertyCardComponent } from '../../shared/components/property-card/property-card.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,7 +22,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     PropertyCardComponent,
     SearchBarComponent,
     MatIconModule,
@@ -44,7 +42,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements OnInit {
-  searchForm!: FormGroup;
+  showScrollTopBtn = false;
+
 
   allProperties: Property[] = [];
   filteredProperties: Property[] = [];
@@ -54,7 +53,7 @@ export class HomeComponent implements OnInit {
   isLoadingMore = false;
   allLoaded = false;
 
-  constructor(private fb: FormBuilder, private propertyService: PropertyService) { }
+  constructor(private propertyService: PropertyService) { }
 
   ngOnInit(): void {
     this.propertyService.getAllProperties().subscribe((properties) => {
@@ -65,10 +64,19 @@ export class HomeComponent implements OnInit {
   }
 
   @HostListener('window:scroll', [])
-  onScroll(): void {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 && !this.isLoadingMore && !this.allLoaded) {
+  onWindowScroll(): void {
+    const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+
+    // Scroll vers le haut visible
+    this.showScrollTopBtn = window.pageYOffset > 300;
+
+    // Chargement infini
+    if (atBottom && !this.isLoadingMore && !this.allLoaded) {
       this.loadMore();
     }
+  }
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   loadMore(): void {

@@ -19,5 +19,16 @@
   <mat-spinner *ngIf="isLoadingMore" class="load-spinner" diameter="32" strokeWidth="4"></mat-spinner>
   <p *ngIf="allLoaded && filteredProperties.length > 0" class="end-message">Toutes les propriétés ont été chargées.
   </p>
-  
+
 </section>
+
+<button
+  mat-fab
+  color="primary"
+  class="scroll-top-btn"
+  (click)="scrollToTop()"
+  *ngIf="showScrollTopBtn"
+  aria-label="Remonter en haut"
+>
+  <mat-icon>keyboard_arrow_up</mat-icon>
+</button>
