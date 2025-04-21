@@ -1,6 +1,5 @@
 .property-detail-card {
-    max-width: 80%;
-    margin: auto;
+
 
     .gallery {
         margin-bottom: 1rem;
@@ -18,7 +17,6 @@
         font-size: 1.8rem;
         font-weight: 600;
         color: #3f51b5;
-        margin: 1rem 0;
     }
 
     .location {
@@ -46,7 +44,6 @@
     }
 
     .description {
-        margin-top: 1rem;
 
         h3 {
             font-size: 1.2rem;

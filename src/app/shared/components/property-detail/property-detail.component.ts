@@ -5,13 +5,14 @@ import { PropertyService } from '../../../core/services/property.service';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { PropertyDetailGalleryComponent } from '../property-detail-gallery/property-detail-gallery.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-property-detail',
   templateUrl: './property-detail.component.html',
   styleUrls: ['./property-detail.component.css'],
   standalone: true,
-  imports: [CommonModule, MatIconModule,PropertyDetailGalleryComponent],
+  imports: [CommonModule, MatDividerModule, MatIconModule,PropertyDetailGalleryComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PropertyDetailComponent implements OnInit {
