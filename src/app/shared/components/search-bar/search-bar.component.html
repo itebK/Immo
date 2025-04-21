@@ -19,50 +19,51 @@
         </mat-button-toggle-group>
       </div>
 
+      <div class="type-region-delegation">
+        <!-- Type de bien -->
+        <mat-form-field appearance="outline" class="mx-w-11">
+          <mat-label>Type de bien</mat-label>
+          <input matInput formControlName="category" placeholder="Type de bien" [matAutocomplete]="categoryAuto" />
+          <mat-autocomplete #categoryAuto="matAutocomplete">
+            <mat-option *ngFor="let category of propertyCategories" [value]="category.label">
+              <mat-icon>{{ category.icon }}</mat-icon> {{ category.label }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
 
-      <!-- Type de bien -->
-      <mat-form-field appearance="outline" class="mx-w-11">
-        <mat-label>Type de bien</mat-label>
-        <input matInput formControlName="category" placeholder="Type de bien" [matAutocomplete]="categoryAuto" />
-        <mat-autocomplete #categoryAuto="matAutocomplete">
-          <mat-option *ngFor="let category of propertyCategories" [value]="category.label">
-            <mat-icon>{{ category.icon }}</mat-icon> {{ category.label }}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
+        <!-- Région avec autocomplete -->
+        <mat-form-field class="mx-w-11" appearance="outline">
+          <mat-label>Région</mat-label>
+          <input matInput formControlName="region" placeholder="Choisir une région" [matAutocomplete]="regionAuto" />
+          <mat-autocomplete #regionAuto="matAutocomplete">
+            <mat-option *ngFor="let region of filteredRegions | async" [value]="region.region">
+              {{ region.region }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
 
-      <!-- Région avec autocomplete -->
-      <mat-form-field class="mx-w-11" appearance="outline">
-        <mat-label>Région</mat-label>
-        <input matInput formControlName="region" placeholder="Choisir une région" [matAutocomplete]="regionAuto" />
-        <mat-autocomplete #regionAuto="matAutocomplete">
-          <mat-option *ngFor="let region of filteredRegions | async" [value]="region.region">
-            {{ region.region }}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-
-      <!-- Délégation avec autocomplete -->
-      <mat-form-field class="mx-w-13" appearance="outline">
-        <mat-label>Délégation</mat-label>
-        <input matInput formControlName="delegation" placeholder="Choisir une délégation"
-          [matAutocomplete]="delegationAuto" />
-        <mat-autocomplete #delegationAuto="matAutocomplete">
-          <mat-option *ngFor="let d of filteredDelegations | async" [value]="d">
-            {{ d }}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-
+        <!-- Délégation avec autocomplete -->
+        <mat-form-field class="mx-w-13" appearance="outline">
+          <mat-label>Délégation</mat-label>
+          <input matInput formControlName="delegation" placeholder="Choisir une délégation"
+            [matAutocomplete]="delegationAuto" />
+          <mat-autocomplete #delegationAuto="matAutocomplete">
+            <mat-option *ngFor="let d of filteredDelegations | async" [value]="d">
+              {{ d }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
       <!-- Bouton recherche -->
-      <button class="search-btn" type="submit" color="primary" aria-label="Rechercher">
-        <mat-icon *ngIf="!isLoading">search</mat-icon>
-        <mat-spinner *ngIf="isLoading" diameter="24" strokeWidth="3"></mat-spinner>
-      </button>
-      <button class="search-btn" type="reset" aria-label="Initialiser">
-        <mat-icon>refresh</mat-icon>
-      </button>
-
+      <div class="search-reset-btn">
+        <button class="search-btn" type="submit" color="primary" aria-label="Rechercher">
+          <mat-icon *ngIf="!isLoading">search</mat-icon>
+          <mat-spinner *ngIf="isLoading" diameter="24" strokeWidth="3"></mat-spinner>
+        </button>
+        <button class="reset-btn" type="reset" aria-label="Initialiser">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
     </form>
   </div>
 </section>

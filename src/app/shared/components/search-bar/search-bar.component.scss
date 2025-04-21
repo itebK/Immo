@@ -153,6 +153,29 @@
     color: #006fe9;
   }
 
+  /* &:active {
+    background-color: #006fe9;
+    color: white;
+  } */
+}
+/* === Bouton de reset === */
+.reset-btn {
+  height: 56px;
+  width: 56px;
+  border-radius: 12px;
+  color: white;
+  background-color: #006fe9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  &:hover {
+    background-color: white;
+    color: #006fe9;
+  }
+
   &:active {
     background-color: #006fe9;
     color: white;
@@ -164,27 +187,18 @@
   color: white;
 }
 
-/* === Responsive === */
-@media (max-width: 600px) {
-  .search-bar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search-btn {
-    align-self: center;
-    margin-top: 1rem;
-  }
-
-  mat-form-field {
-    width: 100%;
-  }
-}
-
 .mx-w-13 {
   max-width: 13em;
+  margin-left: 0.5rem;
 }
 
 .mx-w-11 {
   max-width: 11em;
+  margin-left: 0.5rem;
+}
+
+.search-reset-btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }

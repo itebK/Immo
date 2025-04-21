@@ -13,7 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { map, Observable, startWith } from 'rxjs';
 
 import { LocationService, Region } from '../../../core/services/location.service';
@@ -44,7 +44,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 })
 export class SearchBarComponent {
   @Output() searchSubmitted = new EventEmitter<any>();
-  
+
   isLoading = false;
 
   searchForm: FormGroup;
@@ -55,13 +55,12 @@ export class SearchBarComponent {
     { label: 'COURTE DURÉE', icon: 'schedule', value: PropertyMode.CourteDuree }
   ];
 
-  //PropertyCategory = PropertyCategory;
   propertyCategories = [
     { value: 'residentiel', label: PropertyCategory.Residentiel, icon: 'home' },
     { value: 'commercial', label: PropertyCategory.Commercial, icon: 'apartment' },
     { value: 'agricole', label: PropertyCategory.Agricole, icon: 'spa' },
   ];
-  
+
   regions: Region[] = [];
   delegations: string[] = [];
 
@@ -121,7 +120,7 @@ export class SearchBarComponent {
   }
 
   submit(): void {
-   this.isLoading = true;
+    this.isLoading = true;
 
     const filters = this.searchForm.value;
 

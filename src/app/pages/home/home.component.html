@@ -3,19 +3,21 @@
   <h2 class="section-title">Propriétés à vendre</h2>
 
   <div class="property-grid">
-    <ng-container *ngIf="filteredProperties.length > 0; else noResults">
-      <div
-        *ngFor="let prop of filteredProperties"
-        class="property-wrapper"
-        [routerLink]="'/propriete/' + prop.id"
-        style="cursor: pointer;"
-      >
+    <ng-container *ngIf="visibleProperties.length > 0; else noResults">
+      <div *ngFor="let prop of visibleProperties" class="property-wrapper" [routerLink]="'/propriete/' + prop.id"
+        style="cursor: pointer;">
         <app-property-card [data]="prop"></app-property-card>
       </div>
     </ng-container>
-  
+
     <ng-template #noResults>
       <p class="no-results">Aucune propriété trouvée.</p>
     </ng-template>
+
   </div>
+
+  <mat-spinner *ngIf="isLoadingMore" class="load-spinner" diameter="32" strokeWidth="4"></mat-spinner>
+  <p *ngIf="allLoaded && filteredProperties.length > 0" class="end-message">Toutes les propriétés ont été chargées.
+  </p>
+  
 </section>
