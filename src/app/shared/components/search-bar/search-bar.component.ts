@@ -40,7 +40,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatProgressSpinnerModule
   ],
   templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.css'],
+  styleUrls: ['./search-bar.component.scss'],
 })
 export class SearchBarComponent {
   @Output() searchSubmitted = new EventEmitter<any>();
@@ -55,7 +55,7 @@ export class SearchBarComponent {
     { label: 'COURTE DURÉE', icon: 'schedule', value: PropertyMode.CourteDuree }
   ];
 
-  PropertyCategory = PropertyCategory;
+  //PropertyCategory = PropertyCategory;
   propertyCategories = [
     { value: 'residentiel', label: PropertyCategory.Residentiel, icon: 'home' },
     { value: 'commercial', label: PropertyCategory.Commercial, icon: 'apartment' },
@@ -64,7 +64,7 @@ export class SearchBarComponent {
   
   regions: Region[] = [];
   delegations: string[] = [];
-  
+
   filteredRegions!: Observable<Region[]>;
   filteredDelegations!: Observable<string[]>;
 

@@ -1,0 +1,190 @@
+@use '@angular/material' as mat;
+
+/* === Bannière avec image de fond floutée === */
+.search-banner {
+  position: relative;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://cdn.centris.ca/public/qc/consumersite/images/Search_bg/Tablette-chalet-ile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(14px);
+    transform: scale(1.05);
+    z-index: -1;
+  }
+
+  // Bouton toggle styling (overrides)
+  @include mat.button-toggle-overrides((text-color: white,
+      background-color: transparent,
+      selected-state-background-color: rgba(255, 255, 255, 0.15),
+      selected-state-text-color: white,
+      state-layer-color: white,
+      focus-state-layer-opacity: 0.2,
+      hover-state-layer-opacity: 0.1,
+      divider-color: rgba(255, 255, 255, 0.2)));
+}
+
+/* === Container principal === */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* === Titres === */
+.search-header {
+  margin-bottom: 2rem;
+
+  .search-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #666;
+  }
+}
+
+/* === Toggle Type (Vente, Location...) === */
+.search-type-toggle {
+  margin-bottom: 2rem;
+  width: 100%;
+
+  mat-button-toggle-group {
+    border-radius: 6px !important;
+    overflow: hidden;
+  }
+
+  mat-button-toggle {
+    &.mat-button-toggle-checked {
+      background-color: #006fe9;
+      color: white;
+
+      .selected-check {
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .mat-button-toggle-appearance-standard {
+    color: white;
+  }
+}
+
+/* === Barre de recherche === */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  mat-form-field {
+    --mdc-outlined-text-field-label-text-color: white;
+    --mdc-outlined-text-field-input-text-color: white;
+    --mdc-outlined-text-field-caret-color: white;
+    --mdc-outlined-text-field-focus-label-text-color: white;
+    --mdc-outlined-text-field-hover-label-text-color: white;
+    --mdc-outlined-text-field-outline-color: white;
+    --mat-mdc-form-field-subscript-text-color: white;
+
+    width: 250px;
+    color: white;
+
+    .mat-mdc-form-field-icon {
+      color: white;
+    }
+
+    .mdc-notched-outline {
+      border-color: white !important;
+    }
+
+    .mdc-text-field__input,
+    .mdc-floating-label {
+      color: white !important;
+    }
+
+    .mat-mdc-select-value,
+    .mat-mdc-option {
+      color: white !important;
+    }
+
+    .mat-mdc-option.mat-active,
+    .mat-mdc-option.mat-selected {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .mat-mdc-form-field {
+    margin-right: 2px !important;
+  }
+}
+
+/* === Bouton de recherche === */
+.search-btn {
+  height: 56px;
+  width: 56px;
+  border-radius: 12px;
+  color: white;
+  background-color: #006fe9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  &:hover {
+    background-color: white;
+    color: #006fe9;
+  }
+
+  &:active {
+    background-color: #006fe9;
+    color: white;
+  }
+}
+
+/* === Couleur texte blanc générique === */
+.white-font {
+  color: white;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-btn {
+    align-self: center;
+    margin-top: 1rem;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.mx-w-13 {
+  max-width: 13em;
+}
+
+.mx-w-11 {
+  max-width: 11em;
+}
