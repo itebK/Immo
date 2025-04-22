@@ -43,11 +43,7 @@
       }
     }
 
-    .new-badge {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background-color: #1e2a78; // couleur bleu foncé
+    .badge {
       color: white;
       padding: 4px 10px;
       font-size: 13px;
@@ -56,8 +52,41 @@
       z-index: 2;
       white-space: nowrap;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      width: fit-content;
     }
-        
+
+    .new-badge {
+      background-color: #1e2a78; // couleur bleu foncé
+    }
+
+    .terrain {
+      background-color: #127c50;
+    }
+
+    .villa {
+      background-color: #0d143f;
+    }
+
+    .appartement {
+      background-color: #c5c5c5;
+    }
+
+    .ferme {
+      background-color: #c6bc25;
+    }
+
+    .local {
+      background-color: #16171f;
+    }
+
+    .bureau {
+      background-color: #5a3a0a;
+    }
+
+    .immeuble {
+      background-color: #ffffff;
+      color: black;
+    }
   }
 
   mat-card-content {
@@ -138,8 +167,5 @@
 }
 
 .favorite-btn:hover mat-icon {
-  color: #e60023!important;
+  color: #e60023 !important;
 }
-
-
-
