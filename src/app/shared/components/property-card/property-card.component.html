@@ -1,17 +1,12 @@
 <mat-card class="centris-card">
   <!-- Swiper / Images -->
   <div class="image-wrapper">
-    <swiper-container
-      pagination="true"
-      class="swiper"
-      slides-per-view="1"
-      space-between="10"
-      style="--swiper-pagination-color: #fff"
-    >
+    <swiper-container pagination="true" class="swiper" slides-per-view="1" space-between="10"
+      style="--swiper-pagination-color: #fff">
       @for (img of data.images; track $index) {
-        <swiper-slide>
-          <img [src]="img" alt="Image" class="carousel-image" />
-        </swiper-slide>
+      <swiper-slide>
+        <img [src]="img" alt="Image" class="carousel-image" loading="lazy" />
+      </swiper-slide>
       }
     </swiper-container>
 
@@ -19,8 +14,10 @@
       <span>{{ data.images.length }}</span>
       <mat-icon>photo_camera</mat-icon>
     </div>
-
-    <div *ngIf="data.isNew" class="new-badge">Nouvelle inscription</div>
+    
+    @if(data.isNew){
+    <div class="new-badge">Nouvelle inscription</div>
+    }
   </div>
 
   <!-- Contenu -->
