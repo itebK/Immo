@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-property-detail-gallery',
   templateUrl: './property-detail-gallery.component.html',
-  styleUrls: ['./property-detail-gallery.component.css'],
+  styleUrls: ['./property-detail-gallery.component.scss'],
   standalone: true,
   imports: [CommonModule, MatIconModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

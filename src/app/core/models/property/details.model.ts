@@ -1,4 +1,3 @@
-// 🛠️ Détails techniques selon le type de propriété
 export interface PropertyDetails {
   totalRooms?: number;
   bedrooms?: number;

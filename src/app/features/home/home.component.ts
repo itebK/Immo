@@ -1,6 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PropertyCardComponent } from '../../shared/components/property-card/property-card.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,17 +12,20 @@ import { MatDividerModule } from '@angular/material/divider';
 import { PropertyService } from '../../core/services/property.service';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { Property } from '../../core/models/property.model';
 import { SearchBarComponent } from '../../shared/components/search-bar/search-bar.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { Property } from '../../core/models/property/property.model';
+import { ScrollTopComponent } from '../../shared/components/scroll-top/scroll-top.component';
+import { PropertyListComponent } from '../properties/property-list/property-list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
-    PropertyCardComponent,
     SearchBarComponent,
+    ScrollTopComponent,
+    PropertyListComponent,
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
@@ -38,12 +40,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     RouterModule,
   ],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent implements OnInit {
-  showScrollTopBtn = false;
-
 
   allProperties: Property[] = [];
   filteredProperties: Property[] = [];
@@ -66,9 +66,6 @@ export class HomeComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
-
-    // Scroll vers le haut visible
-    this.showScrollTopBtn = window.pageYOffset > 300;
 
     // Chargement infini
     if (atBottom && !this.isLoadingMore && !this.allLoaded) {
@@ -113,19 +110,14 @@ export class HomeComponent implements OnInit {
 
         return matchesRegion && matchesDelegation && matchesCategory && matchesType;
       });
-
       this.visibleProperties = this.filteredProperties.slice(0, this.step);
       this.allLoaded = this.visibleProperties.length >= this.filteredProperties.length;
 
-      // if (filters.onComplete) {
-      //   setTimeout(() => filters.onComplete(), 500);
-      // }
       if (typeof filters.onComplete === 'function') {
         setTimeout(() => filters.onComplete(), 500);
       } else {
         console.warn('onComplete manquant après reset');
       }
-      
     });
   }
 

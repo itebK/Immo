@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Property } from '../../../core/models/property.model';
+import { Property } from '../../../core/models/property/property.model';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
