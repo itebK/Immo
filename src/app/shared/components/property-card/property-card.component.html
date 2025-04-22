@@ -1,8 +1,13 @@
 <mat-card class="centris-card">
   <!-- Swiper / Images -->
   <div class="image-wrapper">
-    <swiper-container pagination="true" class="swiper" slides-per-view="1" space-between="10"
-      style="--swiper-pagination-color: #fff">
+    <swiper-container
+      pagination="true"
+      class="swiper"
+      slides-per-view="1"
+      space-between="10"
+      style="--swiper-pagination-color: #fff"
+    >
       @for (img of data.images; track $index) {
       <swiper-slide>
         <img [src]="img" alt="Image" class="carousel-image" loading="lazy" />
@@ -14,7 +19,7 @@
       <span>{{ data.images.length }}</span>
       <mat-icon>photo_camera</mat-icon>
     </div>
-    
+
     @if(data.isNew){
     <div class="new-badge">Nouvelle inscription</div>
     }
@@ -23,7 +28,7 @@
   <!-- Contenu -->
   <mat-card-content>
     <div class="top-row">
-      <div class="price">{{ data.price | currency:data.currency }}</div>
+      <div class="price">{{ data.price | currency : data.currency }}</div>
       <button mat-icon-button class="favorite-btn">
         <mat-icon>favorite_border</mat-icon>
       </button>
