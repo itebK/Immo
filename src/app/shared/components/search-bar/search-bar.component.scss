@@ -47,27 +47,40 @@
 .search-header {
   margin-bottom: 2rem;
 
+  @media (max-width: 550px) {
+    margin-bottom: 0rem;
+  }
+
   .search-title {
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+
+    @media (max-width: 550px) {
+      font-size: 1.8rem;
+      margin-bottom: 0rem;
+    }
   }
 
   .search-subtitle {
     font-size: 1.1rem;
     font-style: italic;
-    color: #666;
   }
 }
 
 /* === Toggle Type (Vente, Location...) === */
 .search-type-toggle {
   margin-bottom: 2rem;
-  width: 100%;
+  width: auto;
 
   mat-button-toggle-group {
     border-radius: 6px !important;
     overflow: hidden;
+
+    @media (max-width: 550px) {
+      display: grid;
+      margin-bottom: 0rem;
+    }
   }
 
   mat-button-toggle {
@@ -153,6 +166,7 @@
     color: #006fe9;
   }
 }
+
 /* === Bouton de reset === */
 .reset-btn {
   height: 56px;

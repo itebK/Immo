@@ -12,13 +12,16 @@
       <div class="search-type-toggle">
         <mat-button-toggle-group formControlName="type" class="white-font">
           @for (type of propertyTypes; track type.value) {
-          <mat-button-toggle [value]="type.value">
+          <mat-button-toggle [value]="type.value" [matTooltip]="type.tooltip" matTooltipClass="custom-tooltip"
+            matTooltipPosition="above">
             <mat-icon fontIcon="{{ type.icon }}"></mat-icon>
             {{ type.label }}
           </mat-button-toggle>
+
           }
         </mat-button-toggle-group>
       </div>
+
 
       <div class="type-region-delegation">
         <!-- Type de bien -->
