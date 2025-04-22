@@ -1,7 +1,7 @@
-import { Host } from './host.model';
-import { PropertyCategory } from './property-category.enum';
-import { PropertyMode } from './property-mode.enum';
-import { PropertyType } from './property-type.enum';
+import { PropertyCategory } from '../enums/property-category.enum';
+import { PropertyMode } from '../enums/property-mode.enum';
+import { PropertyType } from '../enums/property-type.enum';
+import { Host } from '../host/host.model';
 import { PropertyDetails } from './details.model';
 
 // 📦 Modèle principal représentant une propriété immobilière

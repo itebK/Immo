@@ -17,8 +17,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { map, Observable, startWith } from 'rxjs';
 
 import { LocationService, Region } from '../../../core/services/location.service';
-import { PropertyMode } from '../../../core/models/property-mode.enum';
-import { PropertyCategory } from '../../../core/models/property-category.enum';
+import { PropertyMode } from '../../../core/models/enums/property-mode.enum';
+import { PropertyCategory } from '../../../core/models/enums/property-category.enum';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
