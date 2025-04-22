@@ -46,13 +46,7 @@ export class SearchBarComponent implements OnInit {
 
   isLoading = false;
   searchForm: FormGroup;
-
-  // propertyTypes = [
-  //   { label: 'TOUTES', icon: 'all_inclusive', value: 'all' },
-  //   { label: 'VENTE', icon: 'home', value: PropertyMode.Vente },
-  //   { label: 'LOCATION', icon: 'vpn_key', value: PropertyMode.Location },
-  //   { label: 'COURTE DURÉE', icon: 'schedule', value: PropertyMode.CourteDuree }
-  // ];
+  
   propertyTypes = [
     {
       label: 'Toutes',
