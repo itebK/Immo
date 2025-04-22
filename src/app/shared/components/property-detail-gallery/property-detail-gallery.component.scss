@@ -63,7 +63,26 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
+    height: 46px;
+    width: 46px;
+    border-radius: 12px;
     color: white;
+    background-color: #006fe9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
     z-index: 1100;
+  
+    &:hover {
+      background-color: white;
+      color: #006fe9;
+    }
+  
+    &:active {
+      background-color: #006fe9;
+      color: white;
+    }
   }
   
