@@ -14,22 +14,22 @@
       </swiper-slide>
       }
     </swiper-container>
+
     <div class="photo-count">
       <span>{{ data.images.length }}</span>
       <mat-icon>photo_camera</mat-icon>
     </div>
-  </div>
 
-
-  <div class="flex flex-column">
-    @if (data.isNew) {
+    <div class="flex flex-column gap-1 absolute top-0 left-0 p-2">
+      @if (data.isNew) {
       <div class="badge new-badge">Nouvelle inscription</div>
       }
       <div [class]="'badge ' + (data.propertyType.toLowerCase() || '')">
         {{ data.propertyType }}
       </div>
+    </div>
   </div>
-  
+
   <!-- Contenu -->
   <mat-card-content>
     <div class="top-row">
@@ -38,6 +38,7 @@
         <mat-icon>favorite_border</mat-icon>
       </button>
     </div>
+
     <div class="type">
       {{ formatType(data.propertyType, data.mode) }}
     </div>
@@ -46,6 +47,7 @@
       <div>{{ data.region }}</div>
       <div>{{ data.delegation }}</div>
     </div>
+
     <div class="features">
       <div class="feature">
         <mat-icon>bed</mat-icon> {{ data.details.bedrooms }}
