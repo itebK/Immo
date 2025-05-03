@@ -78,15 +78,21 @@
     overflow: hidden;
 
     @media (max-width: 550px) {
-      display: grid;
+      display: flex;
       margin-bottom: 0rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
+  .mat-button-toggle-group-appearance-standard {
+    border: none !important;
+  }
   mat-button-toggle {
     &.mat-button-toggle-checked {
       background-color: #006fe9;
       color: white;
+      border-style: solid;
 
       .selected-check {
         display: inline-block;
@@ -97,6 +103,9 @@
 
   .mat-button-toggle-appearance-standard {
     color: white;
+    border-style: solid;
+    border-left:solid;
+    margin: 0.2rem;
   }
 }
 
@@ -143,9 +152,9 @@
     }
   }
 
-  .mat-mdc-form-field {
-    margin-right: 2px !important;
-  }
+  // .mat-mdc-form-field {
+  //   margin-right: 2px !important;
+  // }
 }
 
 /* === Bouton de recherche === */
