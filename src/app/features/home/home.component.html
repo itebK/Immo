@@ -1,4 +1,6 @@
-<app-search-bar (searchSubmitted)="onSearch($event)"></app-search-bar>
+<app-search-bar (searchSubmitted)="onSearch($event)"
+(filtersChanged)="onFiltersChange($event)"
+[resultCount]="resultCount">></app-search-bar>
 <app-property-list
   [visibleProperties]="visibleProperties"
   [isLoadingMore]="isLoadingMore"

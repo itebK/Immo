@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -16,6 +16,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { map, Observable, startWith } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 import { LocationService, Region } from '../../../core/services/location.service';
 import { PropertyMode } from '../../../core/models/enums/property-mode.enum';
@@ -36,17 +38,20 @@ import { PropertyCategory } from '../../../core/models/enums/property-category.e
     MatAutocompleteModule,
     MatButtonToggleModule,
     MatProgressSpinnerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatBadgeModule
   ],
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
 })
 export class SearchBarComponent implements OnInit {
   @Output() searchSubmitted = new EventEmitter<any>();
+  @Input() resultCount: number = 0;
+  @Output() filtersChanged = new EventEmitter<any>();
 
   isLoading = false;
   searchForm: FormGroup;
-  
+    
   propertyTypes = [
     {
       label: 'Toutes',
@@ -102,6 +107,14 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
     this.loadRegions();
     this.onRegionChange();
+    this.searchForm.valueChanges.subscribe((formValue) => {
+      const filters = {
+        ...formValue,
+        type: formValue.type === 'all' ? '' : formValue.type
+      };
+      this.filtersChanged.emit(filters);
+    });
+    
   }
 
   private loadRegions(): void {

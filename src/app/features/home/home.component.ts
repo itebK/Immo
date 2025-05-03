@@ -52,6 +52,8 @@ export class HomeComponent implements OnInit {
   step = 6;
   isLoadingMore = false;
   allLoaded = false;
+  resultCount = 0;
+
 
   constructor(private propertyService: PropertyService) { }
 
@@ -60,6 +62,13 @@ export class HomeComponent implements OnInit {
       this.allProperties = properties;
       this.filteredProperties = [...properties];
       this.visibleProperties = this.filteredProperties.slice(0, this.step);
+  
+      this.onFiltersChange({
+        category: '',
+        type: '',
+        region: '',
+        delegation: ''
+      });
     });
   }
 
@@ -91,7 +100,7 @@ export class HomeComponent implements OnInit {
       if (this.visibleProperties.length >= this.filteredProperties.length) {
         this.allLoaded = true;
       }
-    }, 1000); // Simuler un délai
+    }, 1000);
   }
 
   onSearch(filters: any): void {
@@ -111,6 +120,7 @@ export class HomeComponent implements OnInit {
         return matchesRegion && matchesDelegation && matchesCategory && matchesType;
       });
       this.visibleProperties = this.filteredProperties.slice(0, this.step);
+      this.resultCount = this.filteredProperties.length;
       this.allLoaded = this.visibleProperties.length >= this.filteredProperties.length;
 
       if (typeof filters.onComplete === 'function') {
@@ -120,5 +130,26 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
+  onFiltersChange(filters: any): void {
+    this.propertyService.getAllProperties().subscribe((properties) => {
+      const regionFilter = filters.region?.toLowerCase().trim();
+      const delegationFilter = filters.delegation?.toLowerCase().trim();
+      const categoryFilter = filters.category?.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const typeFilter = filters.type?.toLowerCase();
+  
+      this.filteredProperties = properties.filter((property) => {
+        const matchesRegion = !regionFilter || property.region.toLowerCase().includes(regionFilter);
+        const matchesDelegation = !delegationFilter || property.delegation.toLowerCase().includes(delegationFilter);
+        const matchesCategory = !categoryFilter || property.category === categoryFilter;
+        const matchesType = !typeFilter || property.mode === typeFilter;
+  
+        return matchesRegion && matchesDelegation && matchesCategory && matchesType;
+      });
+  
+      this.visibleProperties = this.filteredProperties.slice(0, this.step);
+      this.allLoaded = this.visibleProperties.length >= this.filteredProperties.length;
+      this.resultCount = this.filteredProperties.length;
+    });
+  }
+  
 }

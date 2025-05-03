@@ -66,7 +66,14 @@
 
       <!-- Boutons -->
       <div class="search-reset-btn">
-        <button class="search-btn" type="submit" color="primary" aria-label="Rechercher">
+        <button class="search-btn"
+        type="submit"
+        color="primary"
+        aria-label="Rechercher"
+        matBadge="{{ resultCount }}"
+        matBadgeColor="accent"
+        matBadgePosition="above after"
+        [matBadgeHidden]="resultCount === 0">
           @if (!isLoading) {
           <mat-icon>search</mat-icon>
           } @else {
