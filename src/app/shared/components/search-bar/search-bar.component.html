@@ -64,6 +64,41 @@
         </mat-form-field>
       </div>
 
+      <div class="desktop-only">
+        <button mat-button (click)="toggleAdvancedFilters()" class="advanced-btn">
+          <mat-icon>tune</mat-icon> Filtres avancés
+        </button>
+      
+        @if (showAdvancedFilters) {
+          <div class="advanced-filters">
+            <mat-form-field appearance="outline">
+              <mat-label>Prix min</mat-label>
+              <input matInput type="number" formControlName="priceMin">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline">
+              <mat-label>Prix max</mat-label>
+              <input matInput type="number" formControlName="priceMax">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline">
+              <mat-label>Surface min (m²)</mat-label>
+              <input matInput type="number" formControlName="surfaceMin">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline">
+              <mat-label>Surface max (m²)</mat-label>
+              <input matInput type="number" formControlName="surfaceMax">
+            </mat-form-field>
+          </div>
+        }
+      </div>
+      <div class="mobile-only">
+        <button mat-icon-button (click)="openBottomSheet()">
+          <mat-icon>tune</mat-icon>
+        </button>
+      </div>
+      
       <!-- Boutons -->
       <div class="search-reset-btn">
         <button class="search-btn"

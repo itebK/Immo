@@ -22,6 +22,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { LocationService, Region } from '../../../core/services/location.service';
 import { PropertyMode } from '../../../core/models/enums/property-mode.enum';
 import { PropertyCategory } from '../../../core/models/enums/property-category.enum';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { AdvancedFilterSheetComponent } from '../advanced-filter-sheet/advanced-filter-sheet.component';
 
 @Component({
   selector: 'app-search-bar',
@@ -50,6 +52,7 @@ export class SearchBarComponent implements OnInit {
   @Output() filtersChanged = new EventEmitter<any>();
 
   isLoading = false;
+  showAdvancedFilters = false;
   searchForm: FormGroup;
     
   propertyTypes = [
@@ -94,7 +97,8 @@ export class SearchBarComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private locationService: LocationService
+    private locationService: LocationService,
+    private bottomSheet: MatBottomSheet
   ) {
     this.searchForm = this.fb.group({
       category: [''],
@@ -182,4 +186,17 @@ export class SearchBarComponent implements OnInit {
 
     this.searchForm.get('delegation')?.disable();
   }
+  toggleAdvancedFilters(): void {
+    this.showAdvancedFilters = !this.showAdvancedFilters;
+  }
+  openBottomSheet(): void {
+    const ref = this.bottomSheet.open(AdvancedFilterSheetComponent);
+    ref.afterDismissed().subscribe((filters) => {
+      if (filters) {
+        this.searchForm.patchValue(filters);
+        this.submit();
+      }
+    });
+  }
+  
 }

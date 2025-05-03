@@ -21,3 +21,18 @@ body {
     font-family: 'Onest','Rubik', sans-serif;
   }
   
+  /* cache sur mobile */
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block !important;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+}
+
