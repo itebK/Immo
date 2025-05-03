@@ -1,8 +1,10 @@
 <mat-card class="centris-card">
   <!-- Swiper / Images -->
   <div class="image-wrapper">
-    <swiper-container pagination="true" class="swiper" slides-per-view="1" space-between="10"
-      style="--swiper-pagination-color: #fff">
+    <swiper-container pagination="true" class="swiper" slides-per-view="1" space-between="10" style="
+         --swiper-pagination-color: #fff;
+         --swiper-pagination-bullet-inactive-color: #969696;
+       ">
       @for (img of data.images; track $index) {
       <swiper-slide>
         <img [src]="img" alt="Image" class="carousel-image" loading="lazy" />
@@ -10,28 +12,46 @@
       }
     </swiper-container>
 
-    <div class="photo-count">
+    <!-- <div class="photo-count">
       <span>{{ data.images.length }}</span>
       <mat-icon>photo_camera</mat-icon>
-    </div>
-    
-    @if(data.isNew){
+    </div> -->
+
+    <!-- @if(data.isNew){
     <div class="new-badge">Nouvelle inscription</div>
     }
+  </div> -->
+  <div
+  class="flex flex-row justify-content-between w-full align-items-start absolute top-0"
+>
+  <div class="flex flex-column gap-1 p-2">
+    @if (data.isNew) {
+    <div class="badge new-badge">Nouvelle inscription</div>
+    }
+    <div [class]="'badge ' + (data.propertyType.toLowerCase() || '')">
+      {{ data.propertyType }}
+    </div>
   </div>
-
+  <button mat-icon-button class="favorite-btn py-2 px-3">
+    <mat-icon>favorite_border</mat-icon>
+  </button>
+</div>
+</div>
   <!-- Contenu -->
   <mat-card-content>
     <div class="top-row">
-      <div class="price">{{ data.price | currency:data.currency }}</div>
+      <!-- <div class="price">{{ data.price | currency:data.currency }}</div>
       <button mat-icon-button class="favorite-btn">
         <mat-icon>favorite_border</mat-icon>
-      </button>
+      </button> -->
+      <div class="price">
+        {{ data.price | currency : data.currency : "symbol" : "1.0-0" }}
+      </div>
     </div>
 
-    <div class="type">
+    <!-- <div class="type">
       {{ formatType(data.propertyType, data.mode) }}
-    </div>
+    </div> -->
     <div class="address">
       <div>{{ data.address }}</div>
       <div>{{ data.region }}</div>
