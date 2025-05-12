@@ -1,0 +1,70 @@
+@if (property) {
+  <div class="m-3 md:m-8 property-detail-card">
+    <div class="card-content flex flex-column gap-3">
+      <!-- Informations principales -->
+      <div class="flex flex-column sm:flex-row justify-content-between gap-3 p-2">
+        <div class="flex flex-order-2 sm:flex-order-1 flex-column justify-content-center">
+          <mat-card-title>{{ property.title }}</mat-card-title>
+          <div class="location">
+            {{ property.address }}, {{ property.delegation }}, {{ property.region }}
+          </div>
+        </div>
+        <div class="flex-order-1 sm:flex-order-2 price">
+          {{ property.price | currency : property.currency : 'symbol' : '1.0-0' }}
+        </div>
+      </div>
+
+      <!-- Images -->
+      <app-property-detail-gallery [images]="property.images || []"></app-property-detail-gallery>
+
+
+      <!-- Caractéristiques -->
+      <div class="characteristics">
+        <div><mat-icon>house</mat-icon> {{ property.propertyType }}</div>
+        <div><mat-icon>calendar_today</mat-icon> {{ property.details.constructionYear || '-' }}</div>
+        <div><mat-icon>straighten</mat-icon> {{ property.details.surface }} m²</div>
+        <div><mat-icon>terrain</mat-icon> {{ property.details.lotArea }} m²</div>
+        <div><mat-icon>bed</mat-icon> {{ property.details.bedrooms }} chambres</div>
+        <div><mat-icon>bathtub</mat-icon> {{ property.details.bathrooms }} salles de bain</div>
+      </div>
+
+      <!-- Description -->
+      <section class="description">
+        <h3>Description</h3>
+        <p>{{ property.description }}</p>
+      </section>
+
+      <!-- Host -->
+      <section class="w-8">
+        <h3>Description</h3>
+        <div class="flex flex-row gap-3">
+          <div>
+            <img class="shadow-1" mat-card-image [src]="property.host.image" alt="Profile" />
+          </div>
+          <div>
+            <div class="flex gap-1 align-items-center">
+              <h3>Courtier</h3>
+              <p>{{ property.host.type }}</p>
+            </div>
+            <div class="flex flex-column">
+              <div><b>{{ property.host.name }}</b></div>
+              <div>{{ property.host.about }}</div>
+            </div>
+            <p>{{ property.host.location }}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Détails financiers (commenté en option) -->
+      <!--
+      @if (property.details.taxes) {
+        <section class="financial-details">
+          <h3>Détails financiers</h3>
+          <div><strong>Taxes municipales :</strong> {{ property.details.taxes.municipales | currency:'TND' }}</div>
+          <div><strong>Électricité :</strong> {{ property.details.taxes.electricite | currency:'TND' }}</div>
+        </section>
+      }
+      -->
+    </div>
+  </div>
+}

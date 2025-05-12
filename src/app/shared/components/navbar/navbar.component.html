@@ -1,28 +1,33 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="mobile-sidenav" mode="over">
-      <mat-nav-list>
-        <a mat-list-item href="#" (click)="drawer.close()">Rechercher</a>
-        <a mat-list-item href="#" (click)="drawer.close()">Vendre</a>
-      </mat-nav-list>
-    </mat-sidenav>
-  
-    <mat-sidenav-content>
-      <mat-toolbar color="primary" class="main-toolbar">
-        <button mat-icon-button (click)="drawer.toggle()" class="hide-desktop">
-          <mat-icon>menu</mat-icon>
+  <mat-sidenav #drawer class="mobile-sidenav" mode="over">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/search" (click)="drawer.close()">Rechercher</a>
+      <a mat-list-item routerLink="/vendre" (click)="drawer.close()">Vendre</a>
+      <a mat-list-item routerLink="/login" (click)="drawer.close()">Se connecter</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="main-toolbar">
+      <button mat-icon-button (click)="drawer.toggle()" class="hide-desktop">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <a [routerLink]="'/'">
+        <img src="Immobox_logo_transparent_cropped.png" alt="Immobox" class="logo" />
+      </a>
+
+      <span class="spacer"></span>
+
+      <nav class="desktop-only">
+        <button mat-flat-button color="accent" class="create-btn">
+          <mat-icon class="me-1">post_add</mat-icon>
+          Publier annonce
         </button>
-        <a [routerLink]="'/'">
-          <img src="Immobox_logo_transparent.png" alt="Immobox" class="logo" />
-        </a>
-        <span class="spacer"></span>
-  
-        <nav class="desktop-only">
-          <a mat-button href="#">Rechercher</a>
-          <a mat-button href="#">Vendre</a>
-        </nav>
-      </mat-toolbar>
-  
-      <!-- Ton contenu -->
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+
+        <a mat-button routerLink="#">Rechercher</a>
+        <a mat-button routerLink="#">Se connecter</a>
+      </nav>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

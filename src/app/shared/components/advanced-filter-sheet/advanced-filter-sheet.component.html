@@ -1,0 +1,24 @@
+<h3 class="p-2">Filtres avancés</h3>
+    <form [formGroup]="form" class="p-3 grid gap-3">
+      <mat-form-field appearance="outline">
+        <mat-label>Prix min</mat-label>
+        <input matInput type="number" formControlName="priceMin">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Prix max</mat-label>
+        <input matInput type="number" formControlName="priceMax">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Surface min (m²)</mat-label>
+        <input matInput type="number" formControlName="surfaceMin">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Surface max (m²)</mat-label>
+        <input matInput type="number" formControlName="surfaceMax">
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" (click)="apply()">Appliquer</button>
+    </form>

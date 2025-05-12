@@ -1,0 +1,26 @@
+<section class="property-section">
+    <!-- <h2 class="section-title">Propriétés à vendre</h2> -->
+  
+    <div class="property-grid">
+      @if (visibleProperties.length > 0) {
+        @for (prop of visibleProperties; track prop.id) {
+          <div class="property-wrapper" [routerLink]="'/details/' + prop.id" style="cursor: pointer;">
+            <app-property-card [data]="prop"></app-property-card>
+          </div>
+        }
+      } @else {
+        <p class="no-results">Aucune propriété trouvée.</p>
+      }
+    </div>
+  
+    @if (isLoadingMore) {
+      <mat-spinner class="load-spinner" diameter="32" strokeWidth="4"></mat-spinner>
+    }
+  
+    @if (allLoaded && visibleProperties.length > 0) {
+      <p class="end-message">
+        Toutes les propriétés ont été chargées.
+      </p>
+    }
+  </section>
+  

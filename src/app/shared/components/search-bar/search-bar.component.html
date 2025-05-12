@@ -1,6 +1,5 @@
 <section class="search-banner">
   <div class="search-container">
-    <!-- Barre de recherche -->
     <form class="search-bar" [formGroup]="searchForm" (ngSubmit)="submit()" (reset)="resetForm()">
 
       <!-- Titre principal -->
@@ -9,15 +8,19 @@
         <p class="search-subtitle white-font">(OU PRESQUE)</p>
       </div>
 
-      <!-- Sélection du type de transaction -->
+      <!-- Type de transaction -->
       <div class="search-type-toggle">
         <mat-button-toggle-group formControlName="type" class="white-font">
-          <mat-button-toggle *ngFor="let type of propertyTypes" [value]="type.value">
+          @for (type of propertyTypes; track type.value) {
+          <mat-button-toggle [value]="type.value" [matTooltip]="type.tooltip" matTooltipClass="custom-tooltip"
+            matTooltipPosition="above">
             <mat-icon fontIcon="{{ type.icon }}"></mat-icon>
             {{ type.label }}
           </mat-button-toggle>
+          }
         </mat-button-toggle-group>
       </div>
+
 
       <div class="type-region-delegation">
         <!-- Type de bien -->
@@ -25,40 +28,92 @@
           <mat-label>Type de bien</mat-label>
           <input matInput formControlName="category" placeholder="Type de bien" [matAutocomplete]="categoryAuto" />
           <mat-autocomplete #categoryAuto="matAutocomplete">
-            <mat-option *ngFor="let category of propertyCategories" [value]="category.label">
+            @for (category of propertyCategories; track category.value) {
+            <mat-option [value]="category.label">
               <mat-icon>{{ category.icon }}</mat-icon> {{ category.label }}
             </mat-option>
+            }
           </mat-autocomplete>
         </mat-form-field>
 
-        <!-- Région avec autocomplete -->
+        <!-- Région -->
         <mat-form-field class="mx-w-11" appearance="outline">
           <mat-label>Région</mat-label>
           <input matInput formControlName="region" placeholder="Choisir une région" [matAutocomplete]="regionAuto" />
           <mat-autocomplete #regionAuto="matAutocomplete">
-            <mat-option *ngFor="let region of filteredRegions | async" [value]="region.region">
+            @for (region of filteredRegions | async; track region.region) {
+            <mat-option [value]="region.region">
               {{ region.region }}
             </mat-option>
+            }
           </mat-autocomplete>
         </mat-form-field>
 
-        <!-- Délégation avec autocomplete -->
+        <!-- Délégation -->
         <mat-form-field class="mx-w-13" appearance="outline">
           <mat-label>Délégation</mat-label>
           <input matInput formControlName="delegation" placeholder="Choisir une délégation"
             [matAutocomplete]="delegationAuto" />
           <mat-autocomplete #delegationAuto="matAutocomplete">
-            <mat-option *ngFor="let d of filteredDelegations | async" [value]="d">
+            @for (d of filteredDelegations | async; track d) {
+            <mat-option [value]="d">
               {{ d }}
             </mat-option>
+            }
           </mat-autocomplete>
         </mat-form-field>
       </div>
-      <!-- Bouton recherche -->
+
+      <div class="desktop-only ji-c">
+        <button  (click)="toggleAdvancedFilters()" class="advanced-btn mb-5">
+          <mat-icon>tune</mat-icon> Filtres avancés
+        </button>
+      
+        @if (showAdvancedFilters) {
+          <div class="advanced-filters">
+            <mat-form-field appearance="outline">
+              <mat-label>Prix min</mat-label>
+              <input matInput type="number" formControlName="priceMin">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline">
+              <mat-label>Prix max</mat-label>
+              <input matInput type="number" formControlName="priceMax">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline">
+              <mat-label>Surface min (m²)</mat-label>
+              <input matInput type="number" formControlName="surfaceMin">
+            </mat-form-field>
+      
+            <mat-form-field appearance="outline">
+              <mat-label>Surface max (m²)</mat-label>
+              <input matInput type="number" formControlName="surfaceMax">
+            </mat-form-field>
+          </div>
+        }
+      </div>
+      <div class="mobile-only">
+        <button class="search-btn" (click)="openBottomSheet()">
+          <mat-icon>tune</mat-icon>
+        </button>
+      </div>
+      
+      <!-- Boutons -->
       <div class="search-reset-btn">
-        <button class="search-btn" type="submit" color="primary" aria-label="Rechercher">
-          <mat-icon *ngIf="!isLoading">search</mat-icon>
-          <mat-spinner *ngIf="isLoading" diameter="24" strokeWidth="3"></mat-spinner>
+        <button class="search-btn"
+        type="submit"
+        color="primary"
+        aria-label="Rechercher"
+        matBadge="{{ resultCount }}"
+        matBadgeColor="accent"
+        matBadgePosition="above after"
+        [matBadgeHidden]="resultCount === 0">
+          @if (!isLoading) {
+          <mat-icon>search</mat-icon>
+          } @else {
+          <mat-spinner diameter="24" strokeWidth="3"></mat-spinner>
+          }
         </button>
         <button class="reset-btn" type="reset" aria-label="Initialiser">
           <mat-icon>refresh</mat-icon>

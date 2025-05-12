@@ -1,0 +1,9 @@
+<app-search-bar (searchSubmitted)="onSearch($event)"
+(filtersChanged)="onFiltersChange($event)"
+[resultCount]="resultCount">></app-search-bar>
+<app-property-list
+  [visibleProperties]="visibleProperties"
+  [isLoadingMore]="isLoadingMore"
+  [allLoaded]="allLoaded">
+</app-property-list>
+<app-scroll-top></app-scroll-top>

@@ -1,5 +1,4 @@
-// search-bar.component.ts
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -15,13 +14,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { map, Observable, startWith } from 'rxjs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 import { LocationService, Region } from '../../../core/services/location.service';
-import { PropertyMode } from '../../../core/models/property-mode.enum';
-import { PropertyCategory } from '../../../core/models/property-category.enum';
-
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { PropertyMode } from '../../../core/models/enums/property-mode.enum';
+import { PropertyCategory } from '../../../core/models/enums/property-category.enum';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { AdvancedFilterSheetComponent } from '../advanced-filter-sheet/advanced-filter-sheet.component';
 
 @Component({
   selector: 'app-search-bar',
@@ -37,23 +39,49 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatButtonModule,
     MatAutocompleteModule,
     MatButtonToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule,
+    MatBadgeModule
   ],
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
 })
-export class SearchBarComponent {
+export class SearchBarComponent implements OnInit {
   @Output() searchSubmitted = new EventEmitter<any>();
+  @Input() resultCount: number = 0;
+  @Output() filtersChanged = new EventEmitter<any>();
 
   isLoading = false;
-
+  showAdvancedFilters = false;
   searchForm: FormGroup;
-
+    
   propertyTypes = [
-    { label: 'VENTE', icon: 'home', value: PropertyMode.Vente },
-    { label: 'LOCATION', icon: 'vpn_key', value: PropertyMode.Location },
-    { label: 'COURTE DURÉE', icon: 'schedule', value: PropertyMode.CourteDuree }
+    {
+      label: 'Toutes',
+      icon: 'all_inclusive',
+      value: 'all',
+      tooltip: 'Afficher toutes les annonces'
+    },
+    {
+      label: 'Vente',
+      icon: 'home',
+      value: PropertyMode.Vente,
+      tooltip: 'Biens à vendre'
+    },
+    {
+      label: 'Location',
+      icon: 'vpn_key',
+      value: PropertyMode.Location,
+      tooltip: 'Location longue durée '
+    },
+    {
+      label: 'Courte durée',
+      icon: 'schedule',
+      value: PropertyMode.CourteDuree,
+      tooltip: 'Location pour vacances ou courte période'
+    }
   ];
+  
 
   propertyCategories = [
     { value: 'residentiel', label: PropertyCategory.Residentiel, icon: 'home' },
@@ -69,17 +97,28 @@ export class SearchBarComponent {
 
   constructor(
     private fb: FormBuilder,
-    private locationService: LocationService
+    private locationService: LocationService,
+    private bottomSheet: MatBottomSheet
   ) {
     this.searchForm = this.fb.group({
       category: [''],
-      type: [''],
+      type: ['all'],
       region: [''],
       delegation: [{ value: '', disabled: true }],
     });
+  }
 
+  ngOnInit(): void {
     this.loadRegions();
     this.onRegionChange();
+    this.searchForm.valueChanges.subscribe((formValue) => {
+      const filters = {
+        ...formValue,
+        type: formValue.type === 'all' ? '' : formValue.type
+      };
+      this.filtersChanged.emit(filters);
+    });
+    
   }
 
   private loadRegions(): void {
@@ -124,8 +163,11 @@ export class SearchBarComponent {
 
     const filters = this.searchForm.value;
 
+    const typeFilter = filters.type === 'all' ? '' : filters.type;
+
     this.searchSubmitted.emit({
       ...filters,
+      type: typeFilter,
       onComplete: () => {
         this.isLoading = false;
       }
@@ -137,10 +179,24 @@ export class SearchBarComponent {
 
     this.searchForm.reset({
       category: '',
-      type: '',
+      type: 'all',
       region: '',
       delegation: ''
     });
 
+    this.searchForm.get('delegation')?.disable();
   }
+  toggleAdvancedFilters(): void {
+    this.showAdvancedFilters = !this.showAdvancedFilters;
+  }
+  openBottomSheet(): void {
+    const ref = this.bottomSheet.open(AdvancedFilterSheetComponent);
+    ref.afterDismissed().subscribe((filters) => {
+      if (filters) {
+        this.searchForm.patchValue(filters);
+        this.submit();
+      }
+    });
+  }
+  
 }
